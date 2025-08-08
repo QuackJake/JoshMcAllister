@@ -3,6 +3,6 @@
 
 <template>
     <h1>
-        Gallery
+        Frequently Asked Questions
     </h1>
 </template>

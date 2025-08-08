@@ -1,20 +1,9 @@
 <script setup lang="ts">
-  import Header from './components/MenuNav.vue'
+  import Header from './components/MenuNav.vue';
   import Footer from './components/Footer.vue';
 
-  import { ref, computed } from 'vue'
-  import Home from './pages/HomePage.vue'
-  import AboutMe from './pages/AboutMe.vue'
-  import Gallery from './pages/Gallery.vue'
-  import NotFound from './pages/NotFound.vue'
-  
-
-  const routes = {
-    '/': Home,
-    '/about': AboutMe,
-    '/gallery': Gallery,
-    '/notfound': NotFound
-  }
+  import { ref, computed } from 'vue';
+  import { routes, NotFound } from './router/routes';
 
   const currentPath = ref(window.location.hash)
 

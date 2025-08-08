@@ -1,0 +1,8 @@
+<script setup lang="ts">
+</script>
+
+<template>
+    <h1>
+        Cookies
+    </h1>
+</template>
