@@ -3,6 +3,6 @@
 
 <template>
     <h1>
-        Copyright Disclosure
+        Calendar
     </h1>
 </template>

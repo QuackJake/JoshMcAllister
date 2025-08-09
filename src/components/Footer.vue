@@ -7,8 +7,8 @@
     <div class="max-w-7xl mx-auto px-4 text-center text-sm p-4">
       <ul class="flex justify-center list-none gap-8 mb-6">
         <li>
-          <a href='#/copyright' class="menu-item">
-            © Copright
+          <a href='#/cookies' class="menu-item">
+            Cookies Policy
           </a>
         </li>
 
