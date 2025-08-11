@@ -1,26 +1,32 @@
 <script setup lang="ts">
+  import TileWithHeader from '../components/tiles/TileWithHeader.vue';
 </script>
 
 <template>
-  <main class="bg-[#DB5035] mx-auto p-8 w-[100%]">
-    <section
-      class="bg-black p-12 rounded-xl shadow-md text-center min-h-[400px] flex flex-col justify-center items-center"
-    > 
-        <!-- "Under the navbar" -->
-        <div
-        class="w-24 h-24 text-white text-4xl flex items-center justify-center rounded-full mb-8"
-        style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
-        >
-        📅
-        </div>
+  <div class="bg-gradient-to-br from-amber-200 to-amber-300 py-12 px-4">
 
-        <div class="bg-white w-full">
-            <h2 class="text-gray-600 text-xl mb-4">Scheduling System</h2>
-            <p class="text-gray-500 mb-8">
-                This page is ready for your scheduling integration.<br />
-                You can add your preferred booking system here.
-            </p>
-        </div>
+    <!-- Hero Section -->
+    <section class="min-h-[40vh] flex flex-col items-center justify-center text-center mb-12 bg-amber-500">
+      <h1 class="text-4xl font-bold text-gray-800 mb-8">Jake Quackenbush</h1>
+      <div class="flex flex-wrap gap-8">
+        <h2 class="text-xl text-gray-600 mb-4">Full Stack Developer & Designer</h2>
+        <button class="bg-white px-4 py-2 rounded shadow">Explore</button>
+      </div>
     </section>
-  </main>
+
+    <!-- About Section -->
+    <section class="text-center bg-amber-500 p-6 rounded">
+      <h2 class="text-3xl font-bold text-gray-800 mb-2">About Me</h2>
+      <p class="text-xl text-gray-600 mb-4">Full Stack Developer & Designer</p>
+      <p class="text-gray-700 max-w-2xl mx-auto">
+        Passionate about creating beautiful, functional web experiences that make a difference. 
+        Always learning, always building, always growing.
+      </p>
+    </section>
+
+  </div>
 </template>
+
+<style scoped>
+/* Additional custom styles if needed */
+</style>
