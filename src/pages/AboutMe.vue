@@ -1,169 +1,59 @@
 <script setup lang="ts">
-  import TileWithHeader from '../components/tiles/TileWithHeader.vue';
+  import assets from '../assets/assets'
 </script>
 
 <template>
-  <div class="max-h-screen bg-gradient-to-br py-12 px-4">
-    <div class="max-w-6xl mx-auto">
-      
-      <!-- Header Section -->
-      <div class="text-center mb-12 bg-white">
-        <div class="relative inline-block mb-6">
-          <div class="absolute -bottom-2 -right-2 bg-green-500 w-8 h-8 rounded-full border-4 border-white"></div>
-        </div>
-        <h1 class="text-4xl font-bold text-gray-800 mb-2">Jake Quackenbush</h1>
-        <p class="text-xl text-gray-600 mb-4">Full Stack Developer & Designer</p>
-        <p class="text-gray-500 max-w-2xl mx-auto">
-          Passionate about creating beautiful, functional web experiences that make a difference. 
-          Always learning, always building, always growing.
-        </p>
-      </div>
 
-      <!-- Tile Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-        <!-- About Tile -->
-        <TileWithHeader 
-          title="About Me"
-          custom-class="md:col-span-2">
-            <template #body>
-                <p class="text-gray-600 leading-relaxed">
-                    I'm a passionate full-stack developer with 5+ years of experience building web applications. 
-                    I love turning complex problems into simple, beautiful solutions. When I'm not coding, 
-                    you'll find me exploring new technologies, contributing to open source, or enjoying the outdoors.
-                </p>
-            </template>
-        </TileWithHeader>
-
-        <!-- Skills Tile -->
-        <TileWithHeader
-          title="My Skills"> 
-            <template #body>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">JavaScript</span>
-                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Vue.js</span>
-                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">React</span>
-                </div>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Node.js</span>
-                    <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Python</span>
-                    <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">SQL</span>
-                </div>
-            </template>
-        </TileWithHeader>
-
-        <!-- Experience Tile -->
-        <TileWithHeader
-          title="Experience">
-            <template #body>
-              <div>
-                <h3 class="font-medium text-gray-800">Senior Developer</h3>
-                <p class="text-sm text-gray-600">Tech Corp • 2021 - Present</p>
-              </div>
-              <div>
-                <h3 class="font-medium text-gray-800">Full Stack Developer</h3>
-                <p class="text-sm text-gray-600">StartupXYZ • 2019 - 2021</p>
-              </div>
-            </template>
-        </TileWithHeader>
-
-        <!-- <TileWithHeader>
-            <template #header>
-
-            </template>
-
-            <template #body>
-
-            </template>
-        </TileWithHeader> -->
-
-
-        <!-- Education Tile -->
-        <TileWithHeader
-          title="Education">
-            <template #body>
-              <div>
-                <h3 class="font-medium text-gray-800">Computer Science</h3>
-                <p class="text-sm text-gray-600">University of Technology</p>
-                <p class="text-sm text-gray-500">Bachelor's Degree • 2019</p>
-              </div>
-            </template>
-        </TileWithHeader>
-
-        
-        <!-- Contact Tile -->
-        <TileWithHeader 
-          title="Contact Me">
-            <template #body>
-              <a href="mailto:john@example.com" class="flex items-center text-gray-600 hover:text-indigo-600 transition-colors">
-                <Mail class="w-4 h-4 mr-2" />
-                john@example.com
-              </a>
-              <a href="https://linkedin.com/in/johndoe" class="flex items-center text-gray-600 hover:text-indigo-600 transition-colors">
-                <Linkedin class="w-4 h-4 mr-2" />
-                LinkedIn
-              </a>
-              <a href="https://github.com/johndoe" class="flex items-center text-gray-600 hover:text-indigo-600 transition-colors">
-                <Github class="w-4 h-4 mr-2" />
-                GitHub
-              </a>
-            </template>
-        </TileWithHeader>
-
-        <!-- Projects Tile -->
-        <TileWithHeader 
-          title="My Projects"
-          custom-class="md:col-span-2"
-          body-spacing="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <template #body>
-              <div class="border border-gray-200 rounded-lg p-4 hover:border-gray-300 transition-colors">
-                <h3 class="font-medium text-gray-800 mb-2">E-commerce Platform</h3>
-                <p class="text-sm text-gray-600 mb-3">Full-stack web application with payment integration</p>
-                <div class="flex gap-2">
-                  <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs">Vue.js</span>
-                  <span class="px-2 py-1 bg-green-100 text-green-700 rounded text-xs">Node.js</span>
-                </div>
-              </div>
-              <div class="border border-gray-200 rounded-lg p-4 hover:border-gray-300 transition-colors">
-                <h3 class="font-medium text-gray-800 mb-2">Task Management App</h3>
-                <p class="text-sm text-gray-600 mb-3">Collaborative project management tool</p>
-                <div class="flex gap-2">
-                  <span class="px-2 py-1 bg-purple-100 text-purple-700 rounded text-xs">React</span>
-                  <span class="px-2 py-1 bg-yellow-100 text-yellow-700 rounded text-xs">Firebase</span>
-                </div>
-              </div>
-
-            </template>
-        </TileWithHeader>
-
-        <!-- Interests Tile -->
-        <TileWithHeader
-          title="Interests">
-            <template #body>
-            <div class="flex items-center">
-              <Camera class="w-4 h-4 text-gray-500 mr-2" />
-              <span class="text-gray-700">Photography</span>
-            </div>
-            <div class="flex items-center">
-              <Mountain class="w-4 h-4 text-gray-500 mr-2" />
-              <span class="text-gray-700">Hiking</span>
-            </div>
-            <div class="flex items-center">
-              <Music class="w-4 h-4 text-gray-500 mr-2" />
-              <span class="text-gray-700">Music Production</span>
-            </div>
-            <div class="flex items-center">
-              <BookOpen class="w-4 h-4 text-gray-500 mr-2" />
-              <span class="text-gray-700">Reading</span>
-            </div>
-
-            </template>
-        </TileWithHeader>
-      </div>
+  <section class="h-[100vh]">
+    <div class="p-4 text-2xl text-left">
+      <h1 class="mb-8">My Story, Your Future</h1>
+      <img
+        :src="assets.selfie"
+        alt="Joshua McAlister"
+        class="float-left h-auto max-w-[45vh] mr-8 mb-2 rounded object-cover m-4"
+      />
+      <p>
+        Josh was born in Utah and raised in Wyoming. Having grown up in Wyoming and attended college in Colorado, Josh is no stranger to the Mountain West. He began his journey eastward living in both Arkansas and Tennessee for over a year each eventually leading him to travel to a total of 43 U.S. States. Josh later lived in Taiwan for 13 years as an educator and traveled to over 10 countries across Asia and Oceania. In 2015, Josh McAlister had begun serving as a dedicated college counselor, beginning his work at an international school in Taiwan and guiding students through applications to universities across the United States, the United Kingdom, Switzerland, South Africa, and New Zealand. In 2017, Josh moved with his family to continue working as a college counselor at a boarding school in central Utah.
+        <br />
+        <br />
+      </p>
+      <p>
+        With a BA in Political Science, a Masters of Education (M. Ed), and over 20 years of classroom experience in the US and abroad, Josh brings a deep understanding of diverse student pathways, tailoring guidance to each individual’s aspirations and strengths. His student-centered approach prioritizes building meaningful relationships, enabling him to understand students’ unique needs and create supportive programs that boost confidence, reduce stress, and allow them to remain focused on academics, athletics, and social life. Over the past eight years, Josh has further developed his expertise by attending national and regional college counseling conferences, as well as visiting a wide range of colleges and universities, building valuable connections and broadening his knowledge of the higher education landscape.
+        <br />
+        <br />
+      </p>
+      <img
+        :src="assets.selfie"
+        alt="Joshua McAlister"
+        class="float-right h-auto max-w-[45vh] mr-8 mb-2 rounded object-cover m-4"
+      />
+      <p>
+        Josh feels most at home outdoors. He loves snowboarding in the winter, paddleboarding and wakeboarding when it’s warm, and heading into the mountains any chance he gets. Since moving to Utah in 2017 with his partner, Jessie, and their two kids, exploring has become a family habit. Together, they’ve visited nine national parks and plenty of state parks, usually with their golden retriever, Koopa, tagging along. And when he’s not out on an adventure, you can usually find Josh chasing a ball—or watching one being chased.
+        <br />
+        <br />      
+      </p>
     </div>
-  </div>
-</template>
+  </section>
 
-<style scoped>
-/* Additional custom styles if needed */
-</style>
+  <!-- horizontal line -->
+  <div class="h-[2px] bg-black w-3/4 mx-auto my-16"></div>
+
+
+  <section>
+    My Work
+  </section>
+
+  <!-- horizontal line -->
+  <div class="h-[2px] bg-black w-3/4 mx-auto my-16"></div>
+
+  <section>
+    Success Stories
+  </section>
+  
+  <!-- horizontal line -->
+  <div class="h-[2px] bg-black w-3/4 mx-auto my-16"></div>
+
+  <section>
+    Certificates and Commendations
+  </section>
+</template>

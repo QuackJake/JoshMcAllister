@@ -1,29 +1,18 @@
 <script setup lang="ts">
-  import Header from './components/MenuNav.vue';
-  import Footer from './components/Footer.vue';
-
-  import { ref, computed } from 'vue';
-  import { routes, NotFound } from './router/routes';
-
-  const currentPath = ref(window.location.hash)
-
-  window.addEventListener('hashchange', () => {
-    currentPath.value = window.location.hash
-  })
-
-  const currentView = computed(() => {
-    return routes[currentPath.value.slice(1) || '/'] || NotFound
-  })
+  import Navbar from './components/pageComponents/Navbar.vue'
+  import Footer from './components/pageComponents/Footer.vue'
+  import PageWrapper from './components/pageComponents/PageWrapper.vue'
+  import Header from './components/pageComponents/Header.vue'
+  import { currentView } from './routeLoader'
 </script>
 
 <template>
-  <div class="bg-white">
-    <Header/>
-
-    <div class="pt-16 p-4">
-      <component :is="currentView" />
-    </div>
-
+    <Header />
+    <Navbar />
+  <div class="w-[85%] mx-auto">
+    <!-- <PageWrapper> -->
+    <component :is="currentView" />
+    <!-- </PageWrapper> -->
     <Footer />
   </div>
 </template>
