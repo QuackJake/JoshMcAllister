@@ -85,9 +85,9 @@
       rows="3"
       class="border p-2 w-full rounded"
     ></textarea>
-    <p v-if="errors.message" class="text-red-600 text-xs">{{ errors.message }}</p>
+    <p v-if="errors.message" class="text-red-600 text-xs m-y-0">{{ errors.message }}</p>
 
-    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded w-full">
+    <button type="submit" class="w-full">
       Send Message
     </button>
   </form>

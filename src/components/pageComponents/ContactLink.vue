@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="flex space-x-12 p-6 bg-amber-500 justify-center items-center">
+    <div class="flex space-x-12 p-6 justify-center items-center mb-16">
         <div class="max-w-[50%] space-y-6">
             <h1>
                 Contact Me
@@ -17,6 +17,6 @@
                 at leo posuere, ut facilisis lorem lobortis.  
             </p>
         </div>
-        <FormTile/>
+        <div class="w-full"><FormTile/></div>
     </div>
 </template>

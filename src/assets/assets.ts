@@ -1,4 +1,4 @@
-// src/assets.ts
+// src/assets/assets.ts
 
 export default {
   profile: new URL('./stock_profile.png', import.meta.url).href,

@@ -1,7 +1,6 @@
 <script setup lang="ts">
   import Navbar from './components/pageComponents/Navbar.vue'
   import Footer from './components/pageComponents/Footer.vue'
-  import PageWrapper from './components/pageComponents/PageWrapper.vue'
   import Header from './components/pageComponents/Header.vue'
   import { currentView } from './routeLoader'
 </script>
@@ -9,12 +8,12 @@
 <template>
     <Header />
     <Navbar />
-  <div class="w-[85%] mx-auto">
-    <!-- <PageWrapper> -->
-    <component :is="currentView" />
-    <!-- </PageWrapper> -->
-    <Footer />
-  </div>
+    <div class="w-[85%] mx-auto">
+      <!-- <PageWrapper> -->
+      <component :is="currentView" />
+      <!-- </PageWrapper> -->
+      <Footer />
+    </div>
 </template>
 
 <style scoped>

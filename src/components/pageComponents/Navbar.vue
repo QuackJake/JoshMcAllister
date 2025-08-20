@@ -1,32 +1,30 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, computed } from "vue";
+import { mainRoutes } from "../../routeLoader";
 
 const menuOpen = ref(false);
+const toggleMenu = () => (menuOpen.value = !menuOpen.value);
 
-const navItems = [
-  { name: "Home", path: "#/" },
-  { name: "About Me", path: "#/about" },
-  { name: "My Approach", path: "#/approachandservices" },
-  { name: "FAQ", path: "#/faq" },
-  { name: "Contact", path: "#/contact" },
-];
+const menuIcon = computed(() =>
+  menuOpen.value
+    ? "M6 18L18 6M6 6l12 12" // X Icon
+    : "M4 6h16M4 12h16M4 18h16" // Hamburger Icon
+);
+
+const baseMenuItemClasses =
+  "menu-item transition-colors duration-150 ease-in-out";
 </script>
 
 <template>
-  <nav class="bg-white shadow-md p-[1.5rem] sticky top-0 z-[100] w-[100%]">
-    <div class="mx-auto flex justify-center">
-      <!-- Logo -->
-      <!-- <a href="#/" class="text-2xl font-bold text-blue-600">
-        CollEdge Counseling
-      </a> -->
-
+  <nav class="bg-white shadow-md p-6 sticky top-0 z-50 w-full">
+    <div class="mx-auto flex justify-center items-center">
       <!-- Hamburger button (mobile) -->
       <button
-        @click="menuOpen = !menuOpen"
+        @click="toggleMenu"
         class="md:hidden p-2 rounded hover:bg-gray-200 focus:outline-none"
         aria-label="Toggle menu"
       >
-        <svg v-if="!menuOpen"
+        <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -34,73 +32,55 @@ const navItems = [
           stroke="currentColor"
           class="w-6 h-6"
         >
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-        <svg v-else
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="2"
-          stroke="currentColor"
-          class="w-6 h-6"
-        >
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M6 18L18 6M6 6l12 12" />
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            :d="menuIcon"
+          />
         </svg>
       </button>
 
       <!-- Desktop menu -->
-      <ul class="hidden md:flex list-none gap-8">
-        <li v-for="item in navItems" :key="item.path">
-          <a :href="item.path" class="menu-item">{{ item.name }}</a>
-        </li>
-      </ul>
+      <nav class="flex flex-wrap justify-center gap-12">
+        <a
+          v-for="item in mainRoutes"
+          :key="item.path"
+          :href="item.path"
+          :class="baseMenuItemClasses"
+        >
+          {{ item.name }}
+        </a>
+      </nav>
     </div>
 
     <!-- Mobile dropdown menu -->
     <transition name="slide">
       <ul
-        v-if="menuOpen"
+        v-show="menuOpen"
         class="flex flex-col gap-4 mt-4 md:hidden border-t border-gray-200 pt-4"
       >
-        <li v-for="item in navItems" :key="item.path">
+        <nav class="flex flex-wrap justify-center gap-12">
           <a
+            v-for="item in mainRoutes"
+            :key="item.path"
             :href="item.path"
-            class="menu-item block"
-            @click="menuOpen = false"
+            :class="baseMenuItemClasses"
           >
             {{ item.name }}
           </a>
-        </li>
+        </nav>
       </ul>
     </transition>
   </nav>
 </template>
 
 <style scoped>
-.menu-item {
-  color: blue;
-  font-size: medium;
-  transition: color 150ms ease-in-out;
-}
 .menu-item:hover {
   color: rgb(198, 189, 189);
 }
 
 /* Smooth dropdown animation */
-.slide-enter-from {
-  opacity: 0;
-  transform: translateY(-10px);
-}
-.slide-enter-to {
-  opacity: 1;
-  transform: translateY(0);
-}
-.slide-leave-from {
-  opacity: 1;
-  transform: translateY(0);
-}
+.slide-enter-from,
 .slide-leave-to {
   opacity: 0;
   transform: translateY(-10px);

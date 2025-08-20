@@ -1,45 +1,56 @@
 <script setup lang="ts">
+import { complianceRoutes, mainRoutes } from '../../routeLoader';
 
 </script>
 
 <template>
-  <footer class="bg-gray-800 text-white py-4">
-    <div class="max-w-7xl mx-auto px-4 text-center text-sm p-4">
-      <ul class="flex justify-center list-none gap-8 mb-6">
-        <li>
-          <a href='#/cookies' class="menu-item">
-            Cookies Policy
+  <footer class="bg-gray-800 text-white py-6 text-sm">
+    <div class="flex px-6 py-4">
+      <!-- Right Side -->
+      <div class="flex-1 px-6 py-4">
+        <nav class="flex flex-wrap justify-end gap-8 mb-4">
+          <a
+            v-for="item in mainRoutes"
+            :key="item.path"
+            :href="item.path"
+            :class="baseMenuItemClasses"
+          >
+            {{ item.name }}
           </a>
-        </li>
+        </nav>
 
-        <li>
-          <a href="#/disclaimer" class="menu-item">
-            Disclaimer
+        <div class="flex justify-end mb-4">
+          <p class="text-gray-500">
+            © {{ new Date().getFullYear() }} ColEdge Counseling. All rights reserved.
+          </p>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="border-l border-gray-600"></div>
+
+      <!-- Left Side -->
+      <div class="flex-1 px-6 py-4">
+        <nav class="flex flex-wrap justify-start gap-8 mb-4">
+          <a
+            v-for="item in complianceRoutes"
+            :key="item.path"
+            :href="item.path"
+            :class="baseMenuItemClasses"
+          >
+            {{ item.name }}
           </a>
-        </li>
+        </nav>
 
-        <li>
-          <a href="#/privacy" class="menu-item">
-            Privacy Policy
+        <div class="flex justify-start mb-4">
+          <a
+            href="mailto:josuamcalister@colledgeacounseling.com"
+            class="text-gray-500 hover:text-gray-300"
+          >
+            josuamcalister@colledgeacounseling.com
           </a>
-        </li>
-
-        <li>
-          <a href="#/servicesagreement" class="menu-item">
-            Services Agreements
-          </a>
-        </li>
-
-        <li>
-          <a href="#/termsandconditions" class="menu-item">
-            Terms & Conditions
-          </a>
-        </li>
-      </ul>
-      <p class="text-gray-500">
-        © {{ new Date().getFullYear() }} [BUSINESS NAME]. All rights reserved.
-      </p>
-
+        </div>
+      </div>
     </div>
   </footer>
 </template>
