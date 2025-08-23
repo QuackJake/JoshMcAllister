@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import assets from '../assets/assets'
+  import ImageGallery from '../components/imageGallery/imageGallery.vue';
 </script>
 
 <template>
@@ -56,4 +57,31 @@
   <section>
     Certificates and Commendations
   </section>
+
+  <ImageGallery>
+    
+  </ImageGallery>
+
 </template>
+
+
+<!-- <script setup lang="ts">
+    defineProps<{
+        smallImageLeft: string
+        largeImageRight: string
+    }>()
+</script>
+
+<template>
+    <div class="w-full mx-auto p-6">
+        <div class="flex gap-6">
+            <div class="w-1/3 aspect-[2/3] overflow-hidden rounded-xl shadow-md">
+                <slot name="imageLeft" />
+            </div>
+
+            <div class="w-2/3 aspect-[3/2] overflow-hidden object-cover rounded-xl shadow-md">
+                <slot name="imageRight" />
+            </div>
+        </div>
+    </div>
+</template> -->

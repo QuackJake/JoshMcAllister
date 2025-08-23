@@ -22,7 +22,7 @@ import NotFound from './pages/NotFound.vue'
 const mainRoutes = [
   { path: '/', name: 'Home', component: Home, type: 'main' },
   { path: '/about', name: 'About Me', component: AboutMe, type: 'main' },
-  { path: '/approachandservices', name: 'Approach & Services', component: ApproachAndServices, type: 'main' },
+  { path: '/approachandservices', name: 'Appraoch & Services', component: ApproachAndServices, type: 'main' },
   { path: '/faq', name: 'FAQ', component: FAQ, type: 'main' },
   { path: '/contact', name: 'Contact Me', component: ContactMe, type: 'main' },
 ]

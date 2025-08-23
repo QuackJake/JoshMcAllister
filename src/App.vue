@@ -9,10 +9,8 @@
     <Header />
     <Navbar />
     <div class="w-[85%] mx-auto">
-      <!-- <PageWrapper> -->
-      <component :is="currentView" />
-      <!-- </PageWrapper> -->
-      <Footer />
+    <component :is="currentView" />
+    <Footer />
     </div>
 </template>
 

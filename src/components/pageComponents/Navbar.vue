@@ -45,7 +45,7 @@ const baseMenuItemClasses =
         <a
           v-for="item in mainRoutes"
           :key="item.path"
-          :href="item.path"
+          :href="'#' + item.path"
           :class="baseMenuItemClasses"
         >
           {{ item.name }}
