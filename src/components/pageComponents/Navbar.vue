@@ -18,6 +18,7 @@ const baseMenuItemClasses =
 <template>
   <nav class="bg-white shadow-md p-6 sticky top-0 z-50 w-full">
     <div class="mx-auto flex justify-center items-center">
+      
       <!-- Hamburger button (mobile) -->
       <button
         @click="toggleMenu"
@@ -41,7 +42,7 @@ const baseMenuItemClasses =
       </button>
 
       <!-- Desktop menu -->
-      <nav class="flex flex-wrap justify-center gap-12">
+      <nav class="md:flex hidden flex-wrap justify-center gap-12">
         <a
           v-for="item in mainRoutes"
           :key="item.path"
@@ -54,23 +55,26 @@ const baseMenuItemClasses =
     </div>
 
     <!-- Mobile dropdown menu -->
-    <transition name="slide">
-      <ul
-        v-show="menuOpen"
-        class="flex flex-col gap-4 mt-4 md:hidden border-t border-gray-200 pt-4"
-      >
-        <nav class="flex flex-wrap justify-center gap-12">
-          <a
+    <div class="md:hidden">
+      <transition name="slide">
+        <ul
+          v-show="menuOpen"
+          class="flex flex-col gap-4 mt-4 :hidden border-t border-gray-200 pt-4"
+        >
+          <li
             v-for="item in mainRoutes"
             :key="item.path"
-            :href="item.path"
-            :class="baseMenuItemClasses"
           >
-            {{ item.name }}
-          </a>
-        </nav>
-      </ul>
-    </transition>
+            <a
+              :href="'#' + item.path"
+              :class="baseMenuItemClasses"
+            >
+              {{ item.name }}
+            </a>
+          </li>
+        </ul>
+      </transition>
+    </div>
   </nav>
 </template>
 

@@ -20,33 +20,33 @@ import Schedule from './pages/services/Schedule.vue'
 import NotFound from './pages/NotFound.vue'
 
 const mainRoutes = [
-  { path: '/', name: 'Home', component: Home, type: 'main' },
-  { path: '/about', name: 'About Me', component: AboutMe, type: 'main' },
-  { path: '/approachandservices', name: 'Appraoch & Services', component: ApproachAndServices, type: 'main' },
-  { path: '/faq', name: 'FAQ', component: FAQ, type: 'main' },
-  { path: '/contact', name: 'Contact Me', component: ContactMe, type: 'main' },
+  { path: '/', name: 'Home', component: Home},
+  { path: '/about', name: 'About Me', component: AboutMe},
+  { path: '/approachandservices', name: 'Approach & Services', component: ApproachAndServices},
+  { path: '/faq', name: 'FAQ', component: FAQ},
+  { path: '/contact', name: 'Contact Me', component: ContactMe},
 ]
 
 const complianceRoutes = [
-  { path: '/cookies', name: 'Cookies', component: Cookies, type: 'compliance' },
-  { path: '/disclaimer', name: 'Disclaimer', component: Disclaimer, type: 'compliance' },
-  { path: '/privacy', name: 'Privacy Policy', component: Privacy, type: 'compliance' },
-  { path: '/servicesagreement', name: 'Services Agreement', component: ServicesAgreement, type: 'compliance' },
-  { path: '/termsandconditions', name: 'Terms & Conditions', component: TermsAndConditions, type: 'compliance' },
+  { path: '/cookies', name: 'Cookies', component: Cookies},
+  { path: '/disclaimer', name: 'Disclaimer', component: Disclaimer},
+  { path: '/privacy', name: 'Privacy Policy', component: Privacy},
+  { path: '/servicesagreement', name: 'Services Agreement', component: ServicesAgreement},
+  { path: '/termsandconditions', name: 'Terms & Conditions', component: TermsAndConditions},
 ]
 
-const secondaryRoutes = [
-  { path: '/calendar', name: 'Calendar', component: Calendar, type: 'secondary' },
-  { path: '/purchase', name: 'Purchase', component: Purchase, type: 'secondary' },
-  { path: '/schedule', name: 'Schedule', component: Schedule, type: 'secondary' },
+const servicesRoutes = [
+  { path: '/calendar', name: 'Calendar', component: Calendar},
+  { path: '/purchase', name: 'Purchase', component: Purchase},
+  { path: '/schedule', name: 'Schedule', component: Schedule},
 ]
 
 // NotFound route object (special case)
 const errorRoutes = [
-  { path: '/notfound', name: 'Not Found', component: NotFound, type: 'error' },
+  { path: '/notfound', name: 'Not Found', component: NotFound},
 ]
 
-const allRoutes = [...mainRoutes, ...complianceRoutes, ...secondaryRoutes, ...errorRoutes]
+const allRoutes = [...mainRoutes, ...complianceRoutes, ...servicesRoutes, ...errorRoutes]
 
 // Route path lookup for fast component resolution
 const routesMap: Record<string, any> = {}
@@ -76,7 +76,7 @@ function navigate(path: string) {
 export {
   mainRoutes,
   complianceRoutes,
-  secondaryRoutes,
+  servicesRoutes,
   allRoutes,
   routesMap as routes,
   currentRoute,

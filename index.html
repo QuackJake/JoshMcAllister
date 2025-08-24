@@ -1,16 +1,35 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
-    
-    <title>ColEdge Counseling</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Rubik:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <title>CollEdge Counseling</title>
+</head>
+<script>
+
+  // Blocks right-click-to-save and dragging for downloading images
+  document.addEventListener("DOMContentLoaded", () => {
+    function isProtected(target) {
+      return target.tagName === "IMG" || target.classList.contains("background-image");
+    }
+
+    ["contextmenu", "dragstart"].forEach(event =>
+      document.addEventListener(event, e => {
+        if (isProtected(e.target)) e.preventDefault();
+      })
+    );
+  });
+</script>
+
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
 </html>

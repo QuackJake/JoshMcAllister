@@ -96,6 +96,16 @@ button:focus-visible {
   padding: 2em;
 }
 
+.background-image {
+  user-select: none;
+  pointer-events: none; /* Allow click events */
+}
+
+img {
+  user-select: none;
+  pointer-events: none;
+}
+
 #app {
   width: 100%;
   max-width: full;

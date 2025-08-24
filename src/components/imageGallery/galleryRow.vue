@@ -13,7 +13,7 @@ defineProps({
 
 <!-- Customizeable Gallery Rows -->
 <template>
-  <div class="w-full mx-auto p-4">
+  <div class="w-full mx-auto py-4">
     <div class="h-[60vh] flex gap-4">
 
       <!-- One image full width -->
