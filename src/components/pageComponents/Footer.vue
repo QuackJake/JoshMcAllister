@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { complianceRoutes, mainRoutes } from '../../routeLoader';
-
+const baseMenuItemClasses =
+  "menu-item transition-colors duration-150 ease-in-out";
+</script>
 </script>
 
 <template>
