@@ -3,7 +3,6 @@ import { complianceRoutes, mainRoutes } from '../../routeLoader';
 const baseMenuItemClasses =
   "menu-item transition-colors duration-150 ease-in-out";
 </script>
-</script>
 
 <template>
   <footer class="bg-gray-800 text-white py-6 text-sm">
