@@ -66,8 +66,6 @@ section {
   height: auto;
   width: 100%;
   /* border: 10px solid #213547; */
-  padding-left: 4rem;
-  padding-right: 4rem;
   display: flex;
   border-radius: 1.5rem;
 }

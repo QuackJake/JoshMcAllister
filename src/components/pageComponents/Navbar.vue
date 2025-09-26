@@ -16,7 +16,7 @@ const baseMenuItemClasses =
 </script>
 
 <template>
-  <nav class="bg-white shadow-md p-6 sticky top-0 z-50 w-full">
+  <nav class="bg-white shadow-md p-6 sticky top-0 z-50 w-full mb-8">
     <div class="mx-auto flex justify-center items-center">
       
       <!-- Hamburger button (mobile) -->

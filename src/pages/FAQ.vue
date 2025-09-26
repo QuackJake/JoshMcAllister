@@ -1,73 +1,7 @@
-<template>
-  <div class="max-w-4xl mx-auto px-6 py-12">
-    <!-- Header Section -->
-    <div class="text-center mb-12">
-      <h1 class="text-4xl font-bold text-gray-900 mb-4">
-        Frequently Asked Questions
-      </h1>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-        Find answers to common questions about our consulting services and how we can help your business grow.
-      </p>
-    </div>
-
-    <!-- FAQ Items -->
-    <div class="space-y-4">
-      <div 
-        v-for="(faq, index) in faqs" 
-        :key="index"
-        class="border border-gray-200 rounded-lg overflow-hidden shadow-sm"
-      >
-        <!-- Question Header -->
-        <button
-          @click="toggleFaq(index)"
-          class="w-full px-6 py-5 text-left flex items-center justify-between duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
-          :aria-expanded="openFaqs.includes(index)"
-        >
-          <h3 class="text-lg font-semibold text-gray-900 pr-4">
-            {{ faq.question }}
-          </h3>
-          <div class="flex-shrink-0">
-            <svg 
-              :class="['w-5 h-5 text-gray-500 transition-transform duration-200', openFaqs.includes(index) ? 'rotate-180' : '']"
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
-            >
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </div>
-        </button>
-
-        <!-- Answer Content -->
-        <div 
-          v-show="openFaqs.includes(index)"
-          class="px-6 pb-5 text-left text-gray-700 leading-relaxed"
-        >
-          <div class="pt-2 border-t border-gray-100">
-            {{ faq.answer }}
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Contact CTA -->
-    <div class="mt-12 text-center bg-gray-50 rounded-lg p-8">
-      <h2 class="text-2xl font-semibold text-gray-900 mb-3">
-        Still have questions?
-      </h2>
-      <p class="text-gray-600 mb-6">
-        We're here to help. Get in touch with our team for personalized assistance.
-      </p>
-      <button @click="navigate('/contact')" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-        Contact Us Today
-      </button>
-    </div>
-  </div>
-</template>
-
 <script setup>
 import { ref } from 'vue'
 import { navigate } from '../routeLoader'
+import ContactLink from '../components/pageComponents/ContactLink.vue'
 
 const openFaqs = ref([])
 
@@ -115,3 +49,49 @@ const toggleFaq = (index) => {
   }
 }
 </script>
+
+<template>
+  <div class="max-w-4xl mx-auto px-6 py-12">
+    <!-- Header Section -->
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">
+        Frequently Asked Questions
+      </h1>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Find answers to some of the most common questions about my College Counseling and Consulting services so I can
+        best help you.
+      </p>
+    </div>
+
+    <!-- FAQ Items -->
+    <div class="space-y-4">
+      <div v-for="(faq, index) in faqs" :key="index"
+        class="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+        <!-- Question Header -->
+        <button @click="toggleFaq(index)"
+          class="w-full px-6 py-5 text-left flex items-center justify-between duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
+          :aria-expanded="openFaqs.includes(index)">
+          <h3 class="text-lg font-semibold text-gray-900 pr-4">
+            {{ faq.question }}
+          </h3>
+          <div class="flex-shrink-0">
+            <svg
+              :class="['w-5 h-5 text-gray-500 transition-transform duration-200', openFaqs.includes(index) ? 'rotate-180' : '']"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+        </button>
+
+        <!-- Answer Content -->
+        <div v-show="openFaqs.includes(index)" class="px-6 pb-5 text-left text-gray-700 leading-relaxed">
+          <div class="pt-2 border-t border-gray-100">
+            {{ faq.answer }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ContactLink />
+  </div>
+</template>
