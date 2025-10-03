@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import assets from '../assets/assets'
 import Landing from '../components/pageComponents/Landing.vue'
+import PreferredColleges from '../components/pageComponents/PreferredColleges.vue'
 import ContactLink from '../components/pageComponents/ContactLink.vue'
 import ServicesCarousel from '../components/pageComponents/ServicesCarousel.vue'
 </script>
@@ -12,9 +13,10 @@ import ServicesCarousel from '../components/pageComponents/ServicesCarousel.vue'
   <!-- horizontal line -->
   <div class="h-[2px] bg-black w-3/4 mx-auto my-16"></div>
 
+  <PreferredColleges />
 
   <!-- About Section -->
-  <section>
+  <!-- <section>
     <div class="p-4">
       <h1 class="mb-16">My Story, Your Future</h1>
       <img :src="assets.selfie" alt="Joshua McAlister"
@@ -40,7 +42,7 @@ import ServicesCarousel from '../components/pageComponents/ServicesCarousel.vue'
         broadening his knowledge of the higher education landscape.
       </p>
     </div>
-  </section>
+  </section> -->
 
   <!-- horizontal line -->
   <div class="h-[2px] bg-black w-3/4 mx-auto my-16"></div>
