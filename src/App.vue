@@ -6,7 +6,7 @@
 </script>
 
 <template>
-    <Header />
+    <!-- <Header /> -->
     <Navbar />
     <div class="w-[85%] mx-auto">
     <component :is="currentView" />

@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <div class="bg-white top-0">
+    <div class="bg-[#f7f7f7] top-0">
         <h1 class="text-2xl mt-0 p-8">
             CollEdge Counseling
         </h1>

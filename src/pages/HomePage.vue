@@ -1,27 +1,13 @@
 <script setup lang="ts">
-import { navigate } from '../routeLoader'
 import assets from '../assets/assets'
+import Landing from '../components/pageComponents/Landing.vue'
 import ContactLink from '../components/pageComponents/ContactLink.vue'
 import ServicesCarousel from '../components/pageComponents/ServicesCarousel.vue'
 </script>
 
 <template>
   <!-- Hero Section -->
-  <section>
-    <div class="relative w-full min-h-[85vh] flex flex-col items-center justify-center text-center">
-      <img :src="assets.test" alt="Joshua McAlister - College Counselor and Advisor"
-        class="absolute inset-0 w-full h-full object-cover" />
-
-      <div class="relative z-10 flex flex-col items-center justify-center px-4">
-        <h1 class="font-bold text-gray-800 text-3xl md:text-5xl">Joshua McAlister</h1>
-        <h2 class="text-lg md:text-2xl mt-2">College Counselor and Advisor</h2>
-        <button @click="navigate('/about')" class="mt-4 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
-          About Me
-        </button>
-      </div>
-
-    </div>
-  </section>
+  <Landing />
 
   <!-- horizontal line -->
   <div class="h-[2px] bg-black w-3/4 mx-auto my-16"></div>
