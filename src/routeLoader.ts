@@ -23,7 +23,8 @@ const mainRoutes = [
   { path: '/', name: 'Home', component: Home},
   { path: '/about', name: 'About Me', component: AboutMe},
   { path: '/approachandservices', name: 'Approach & Services', component: ApproachAndServices},
-  { path: '/faq', name: 'FAQ', component: FAQ},
+  // Commenting out, add back in later
+  // { path: '/faq', name: 'FAQ', component: FAQ},
   { path: '/contact', name: 'Contact Me', component: ContactMe},
 ]
 
