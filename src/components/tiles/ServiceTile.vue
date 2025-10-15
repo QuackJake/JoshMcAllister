@@ -7,7 +7,7 @@
 </script>
 
 <template>
-    <div class="flex flex-col items-center p-8 bg-gray-200 rounded-2xl max-w-[32%]">
+    <div class="flex flex-col items-center p-8 bg-[#f7f7f7] rounded-2xl shadow-md max-w-[32%]">
         <img 
             :src="image"
             alt=""

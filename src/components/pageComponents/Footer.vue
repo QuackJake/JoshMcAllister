@@ -5,7 +5,7 @@ const baseMenuItemClasses =
 </script>
 
 <template>
-  <footer class="bg-gray-800 text-white py-6 text-sm">
+  <footer class="bg-[#352f2f] py-6 text-sm">
     <div class="flex flex-col md:flex-row md:justify-between px-6 py-4">
 
       <!-- Right Side -->

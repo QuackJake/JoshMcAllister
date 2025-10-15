@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import Navbar from './components/pageComponents/Navbar.vue'
   import Footer from './components/pageComponents/Footer.vue'
-  import Header from './components/pageComponents/Header.vue'
+  // import Header from './components/pageComponents/Header.vue'
   import { currentView } from './routeLoader'
 </script>
 
@@ -9,9 +9,9 @@
     <!-- <Header /> -->
     <Navbar />
     <div class="w-[85%] mx-auto">
-    <component :is="currentView" />
-    <Footer />
+      <component :is="currentView" />
     </div>
+    <Footer />
 </template>
 
 <style scoped>

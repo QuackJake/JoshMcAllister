@@ -57,4 +57,7 @@ import ServicesCarousel from '../components/pageComponents/ServicesCarousel.vue'
   <contact-link>
 
   </contact-link>
+
+  <!-- horizontal line -->
+  <div class="mx-auto my-16"></div>
 </template>
