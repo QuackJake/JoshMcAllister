@@ -23,7 +23,7 @@ import ServiceTile from '../tiles/ServiceTile.vue';
                     </template>
                 </ServiceTile>
 
-                <ServiceTile :image="assets.selfie" service-title="Senior-Year Services"
+                <ServiceTile :image="assets.selfie" service-title="Senior Year Services"
                     :route="() => navigate('/purchase')">
                     <template #body>
                         <p>
@@ -37,7 +37,7 @@ import ServiceTile from '../tiles/ServiceTile.vue';
                     </template>
                 </ServiceTile>
 
-                <ServiceTile :image="assets.test" service-title="Confidence Packages"
+                <ServiceTile :image="assets.test" service-title="Full-Confidence Packages"
                     :route="() => navigate('/schedule')">
                     <template #body>
                         <p>
