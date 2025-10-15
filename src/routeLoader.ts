@@ -4,7 +4,7 @@ import { ref, computed } from 'vue'
 import Home from './pages/HomePage.vue'
 import AboutMe from './pages/AboutMe.vue'
 import ApproachAndServices from './pages/ApproachAndServices.vue'
-import FAQ from './pages/FAQ.vue'
+// import FAQ from './pages/FAQ.vue'
 import ContactMe from './pages/ContactMe.vue'
 
 import Cookies from './pages/compliance/Cookies.vue'
