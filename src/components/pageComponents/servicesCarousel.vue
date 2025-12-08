@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import assets from '../../assets/assets';
-import { navigate } from '../../routeLoader';
 import ServiceTile from '../tiles/ServiceTile.vue';
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+function goToContact() {
+  router.push('/contact')
+}
 </script>
 
 <template>
@@ -9,8 +14,11 @@ import ServiceTile from '../tiles/ServiceTile.vue';
         <div class="flex flex-col justify-center ">
             <h1 class="mt-4 mb-16">My Services</h1>
             <div class="flex justify-between p-0">
-                <ServiceTile :image="assets.stock_mountains" service-title="Junior Year Services"
-                    :route="() => navigate('/calendar')">
+                <ServiceTile
+                    :image="assets.stock_mountains"
+                    service-title="Junior Year Services"
+                    :route="() => router.push('/calendar')"
+                >
                     <template #body>
                         <p>
                             Junior year is all about exploration and building a strong foundation.
@@ -23,8 +31,11 @@ import ServiceTile from '../tiles/ServiceTile.vue';
                     </template>
                 </ServiceTile>
 
-                <ServiceTile :image="assets.selfie" service-title="Senior Year Services"
-                    :route="() => navigate('/purchase')">
+                <ServiceTile
+                    :image="assets.selfie"
+                    service-title="Junior Year Services"
+                    :route="() => router.push('/calendar')"
+                >
                     <template #body>
                         <p>
                             Senior year is the time to put everything into action.
@@ -37,8 +48,11 @@ import ServiceTile from '../tiles/ServiceTile.vue';
                     </template>
                 </ServiceTile>
 
-                <ServiceTile :image="assets.test" service-title="Full-Confidence Packages"
-                    :route="() => navigate('/schedule')">
+                <ServiceTile
+                    :image="assets.stock_mountains"
+                    service-title="Junior Year Services"
+                    :route="() => router.push('/calendar')"
+                >
                     <template #body>
                         <p>
                             I'm a passionate full-stack developer with 5+ years of experience building web applications.

@@ -1,60 +1,71 @@
 <template>
-  <div ref="viewport" class="infinite-viewport" aria-hidden="true">
-    <div
-      ref="scroller"
-      class="scroller"
-      :style="{
-        '--scroll-distance': scrollDistance + 'px',
-        '--anim-duration': duration + 's'
-      }"
-    >
-      <div class="grid">
+  <section class="flex flex-col md:flex-row items-center justify-center gap-12 w-full max-w-5xl mx-auto px-4 py-12">
+    
+    <div class="md:w-1/2 text-center md:text-left space-y-4">
+      <h2 class="text-2xl font-semibold text-gray-800">
+        Trusted by Top Colleges Nationwide
+      </h2>
+      <p class="text-gray-600 leading-relaxed">
+        Our students have been accepted to universities across the country. The colleges below represent just a few of the many schools where our guidance has helped applicants succeed. 
+      </p>
+    </div>
+
+    <!-- Scrolling grid component -->
+    <div class="md:w-1/2">
+      <div
+        ref="viewport"
+        class="mx-auto overflow-hidden relative w-full"
+        aria-hidden="true"
+      >
         <div
-          v-for="(src, i) in doubledImages"
-          :key="i"
-          class="cell"
-          @dragstart.prevent
+          ref="scroller"
+          class="animate-[scroll-up_var(--anim-duration)_linear_infinite] will-change-transform"
+          :style="{
+            '--scroll-distance': scrollDistance + 'px',
+            '--anim-duration': duration + 's'
+          }"
         >
-          <img
-            :src="src"
-            alt=""
-            draggable="false"
-            class="cell-img"
-            tabindex="-1"
-            aria-hidden="true"
-          />
+          <div class="grid grid-cols-2 gap-2">
+            <div
+              v-for="(src, i) in doubledImages"
+              :key="i"
+              class="w-full aspect-square overflow-hidden select-none pointer-events-none"
+            >
+              <img
+                :src="src"
+                alt=""
+                draggable="false"
+                class="w-full h-full object-contain block select-none pointer-events-none"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
-<script setup>
-import { ref, onMounted, onBeforeUnmount, computed } from 'vue'
+<script setup lang="ts">
+import { ref, onMounted, onBeforeUnmount } from 'vue'
+import collegeLogos from '../../assets/collegeLogos/collegeLogos.ts'
 
-/**
- * CONFIG
- * rows: number of rows in the "logical" grid (not the visible viewport)
- * cols: number of columns (2)
- * visibleRows: number of rows visible at once (3)
- */
 const rows = 8
 const cols = 2
-const visibleRows = 3
+const visibleRows = 3 // 3 rows * 2 columns = 6 visible images
 
-const baseImages = Array.from({ length: rows * cols }, (_, i) =>
-  `https://picsum.photos/seed/${i + 1}/800`
+const total = rows * cols
+const baseImages = Array.from({ length: total }, (_, i) =>
+  collegeLogos[i % collegeLogos.length]
 )
-
 const doubledImages = [...baseImages, ...baseImages]
 
-const viewport = ref(null)
-const scroller = ref(null)
+const viewport = ref<HTMLElement | null>(null)
+const scroller = ref<HTMLElement | null>(null)
 
 const scrollDistance = ref(0)
 const duration = ref(0)
 
-let ro = null
+let ro: ResizeObserver | null = null
 
 function updateMeasurements() {
   if (!viewport.value) return
@@ -62,20 +73,21 @@ function updateMeasurements() {
   const viewportWidth = viewport.value.clientWidth
   const square = viewportWidth / cols
 
+  // ✅ Set viewport height to fit exactly 3 rows
   const desiredHeight = square * visibleRows
   viewport.value.style.height = `${desiredHeight}px`
 
+  // Compute full scroll distance (entire 8-row grid)
   const totalGridHeight = square * rows
-
   scrollDistance.value = totalGridHeight
 
-  const speedPerRow = 7 
+  // Animation duration (speed)
+  const speedPerRow = 7
   duration.value = Math.max(5, rows * speedPerRow)
 }
 
 onMounted(() => {
   updateMeasurements()
-  // responsive: observe size changes
   ro = new ResizeObserver(updateMeasurements)
   if (viewport.value) ro.observe(viewport.value)
 })
@@ -85,58 +97,7 @@ onBeforeUnmount(() => {
 })
 </script>
 
-<style scoped>
-/* viewport masks the scroller to show only visible rows */
-.infinite-viewport {
-  width: 100%;
-  max-width: 800px; /* optional max */
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-  /* height is set via JS to match 3 squares high responsively */
-  box-sizing: border-box;
-}
-
-/* scroller moves upward continuously; CSS vars set from script */
-.scroller {
-  display: block;
-  /* make sure inner has enough height to contain duplicated content */
-  animation-name: scroll-up;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-duration: var(--anim-duration, 12s);
-  will-change: transform;
-}
-
-/* grid layout: 2 columns, as many rows as items */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 6px; /* spacing between squares */
-}
-
-/* each cell keeps a perfect square */
-.cell {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  pointer-events: none; /* images are non-interactive */
-  user-select: none;
-  -webkit-user-drag: none;
-}
-
-/* image fills the square, center-cropped */
-.cell-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  pointer-events: none; /* ensure clicks don't interact */
-  user-select: none;
-  -webkit-user-drag: none;
-}
-
-/* Animation uses the CSS variable --scroll-distance (px) */
+<style>
 @keyframes scroll-up {
   from {
     transform: translateY(0);

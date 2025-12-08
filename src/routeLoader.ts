@@ -4,7 +4,7 @@ import { ref, computed } from 'vue'
 import Home from './pages/HomePage.vue'
 import AboutMe from './pages/AboutMe.vue'
 import ApproachAndServices from './pages/ApproachAndServices.vue'
-// import FAQ from './pages/FAQ.vue'
+import FAQ from './pages/FAQ.vue'
 import ContactMe from './pages/ContactMe.vue'
 
 import Cookies from './pages/compliance/Cookies.vue'
@@ -24,7 +24,7 @@ const mainRoutes = [
   { path: '/about', name: 'About Me', component: AboutMe},
   { path: '/approachandservices', name: 'Approach & Services', component: ApproachAndServices},
   // Commenting out, add back in later
-  // { path: '/faq', name: 'FAQ', component: FAQ},
+  { path: '/faq', name: 'FAQ', component: FAQ},
   { path: '/contact', name: 'Contact Me', component: ContactMe},
 ]
 
