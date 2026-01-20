@@ -3,10 +3,10 @@
     
     <div class="md:w-1/2 text-center md:text-left space-y-4">
       <h2 class="text-2xl font-semibold text-gray-800">
-        Trusted by Top Colleges Nationwide
+        Trusted by Families, Recognized by Professionals
       </h2>
       <p class="text-gray-600 leading-relaxed">
-        Our students have been accepted to universities across the country. The colleges below represent just a few of the many schools where our guidance has helped applicants succeed. 
+        Our students have been accepted to universities across the country. The colleges seen here represent just a few of the many schools where our guidance has helped applicants succeed. 
       </p>
     </div>
 
@@ -73,15 +73,12 @@ function updateMeasurements() {
   const viewportWidth = viewport.value.clientWidth
   const square = viewportWidth / cols
 
-  // ✅ Set viewport height to fit exactly 3 rows
   const desiredHeight = square * visibleRows
   viewport.value.style.height = `${desiredHeight}px`
 
-  // Compute full scroll distance (entire 8-row grid)
   const totalGridHeight = square * rows
   scrollDistance.value = totalGridHeight
 
-  // Animation duration (speed)
   const speedPerRow = 7
   duration.value = Math.max(5, rows * speedPerRow)
 }

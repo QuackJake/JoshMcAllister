@@ -4,9 +4,10 @@ import ServiceTile from '../tiles/ServiceTile.vue';
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
-function goToContact() {
-  router.push('/contact')
-}
+
+// function goToContact() {
+//   router.push('/contact')
+// }
 </script>
 
 <template>
@@ -17,7 +18,7 @@ function goToContact() {
                 <ServiceTile
                     :image="assets.stock_mountains"
                     service-title="Junior Year Services"
-                    :route="() => router.push('/calendar')"
+                    to="/approachandservices"
                 >
                     <template #body>
                         <p>
@@ -31,9 +32,9 @@ function goToContact() {
                     </template>
                 </ServiceTile>
 
-                <ServiceTile
-                    :image="assets.selfie"
-                    service-title="Junior Year Services"
+                <!-- <ServiceTile
+                    :image="assets.stock_mountains"
+                    service-title="Senior Year Services"
                     :route="() => router.push('/calendar')"
                 >
                     <template #body>
@@ -50,18 +51,16 @@ function goToContact() {
 
                 <ServiceTile
                     :image="assets.stock_mountains"
-                    service-title="Junior Year Services"
+                    service-title="Counseling Bundles"
                     :route="() => router.push('/calendar')"
                 >
                     <template #body>
                         <p>
-                            I'm a passionate full-stack developer with 5+ years of experience building web applications.
-                            I love turning complex problems into simple, beautiful solutions. When I'm not coding,
-                            you'll find me exploring new technologies, contributing to open source, or enjoying the
-                            outdoors.
+                            We bundle different services and meetings over the course of a year to ensure that
+                            the correct decisions are being made every step of the way.
                         </p>
                     </template>
-                </ServiceTile>
+                </ServiceTile> -->
             </div>
         </div>
     </section>

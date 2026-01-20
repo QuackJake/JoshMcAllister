@@ -1,96 +1,41 @@
 <script setup lang="ts">
-import { ref, computed } from "vue";
-import { mainRoutes } from "../../routeLoader";
+import { RouterLink, useRouter } from "vue-router";
 
-const menuOpen = ref(false);
-const toggleMenu = () => (menuOpen.value = !menuOpen.value);
+const router = useRouter();
 
-const menuIcon = computed(() =>
-  menuOpen.value
-    ? "M6 18L18 6M6 6l12 12" // X Icon
-    : "M4 6h16M4 12h16M4 18h16" // Hamburger Icon
-);
+// const baseMenuItemClasses =
+//   "menu-item transition-colors duration-150 ease-in-out";
 
-const baseMenuItemClasses =
-  "menu-item transition-colors duration-150 ease-in-out";
+const mainRoutes = router
+  .getRoutes()
+  .filter((r) => r.meta.group === "main");
 </script>
+
 
 <template>
   <nav class="bg-[#f7f7f7] shadow-md p-6 sticky top-0 z-50 w-full mb-8">
     <div class="mx-auto flex justify-center items-center">
-      
-      <!-- Hamburger button (mobile) -->
-      <button
-        @click="toggleMenu"
-        class="md:hidden p-2 rounded hover:bg-gray-200 focus:outline-none"
-        aria-label="Toggle menu"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="2"
-          stroke="currentColor"
-          class="w-6 h-6"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            :d="menuIcon"
-          />
-        </svg>
-      </button>
-
-      <!-- Desktop menu -->
-      <nav class="md:flex hidden flex-wrap justify-center gap-12">
-        <a
+      <nav class="flex flex-wrap justify-center gap-12">
+        <RouterLink
           v-for="item in mainRoutes"
           :key="item.path"
-          :href="'#' + item.path"
-          :class="baseMenuItemClasses"
+          :to="item.path"
+          class="menu-item transition-colors duration-150 ease-in-out hover:text-[#c6bdbd]"
         >
           {{ item.name }}
-        </a>
+        </RouterLink>
       </nav>
-    </div>
-
-    <!-- Mobile dropdown menu -->
-    <div class="md:hidden">
-      <transition name="slide">
-        <ul
-          v-show="menuOpen"
-          class="flex flex-col gap-4 mt-4 :hidden border-t border-gray-200 pt-4"
-        >
-          <li
-            v-for="item in mainRoutes"
-            :key="item.path"
-          >
-            <a
-              :href="'#' + item.path"
-              :class="baseMenuItemClasses"
-            >
-              {{ item.name }}
-            </a>
-          </li>
-        </ul>
-      </transition>
     </div>
   </nav>
 </template>
 
-<style scoped>
-.menu-item:hover {
-  color: rgb(198, 189, 189);
-}
 
-/* Smooth dropdown animation */
-.slide-enter-from,
-.slide-leave-to {
-  opacity: 0;
-  transform: translateY(-10px);
-}
-.slide-enter-active,
-.slide-leave-active {
-  transition: all 0.2s ease;
-}
+<style scoped>
+/* const baseMenuItemClasses =
+  "menu-item transition-colors duration-150 ease-in-out";
+
+
+.menu-item:hover {
+  color: rgb(198, 189, 189); */
+/* } */
 </style>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import { navigate } from '../../routeLoader';
+    // import { navigate } from '../../routeLoader';
 </script>
 
 <template>

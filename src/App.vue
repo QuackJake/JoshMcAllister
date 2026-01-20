@@ -2,14 +2,13 @@
   import Navbar from './components/pageComponents/Navbar.vue'
   import Footer from './components/pageComponents/Footer.vue'
   // import Header from './components/pageComponents/Header.vue'
-  import { currentView } from './routeLoader'
 </script>
 
 <template>
     <!-- <Header /> -->
     <Navbar />
     <div class="w-[85%] mx-auto">
-      <component :is="currentView" />
+      <router-view />
     </div>
     <Footer />
 </template>
