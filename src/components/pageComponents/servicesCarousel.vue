@@ -4,10 +4,6 @@ import ServiceTile from '../tiles/ServiceTile.vue';
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
-
-// function goToContact() {
-//   router.push('/contact')
-// }
 </script>
 
 <template>
@@ -32,10 +28,10 @@ const router = useRouter()
                     </template>
                 </ServiceTile>
 
-                <!-- <ServiceTile
+                <ServiceTile
                     :image="assets.stock_mountains"
                     service-title="Senior Year Services"
-                    :route="() => router.push('/calendar')"
+                    to="/approachandservices"
                 >
                     <template #body>
                         <p>
@@ -52,7 +48,7 @@ const router = useRouter()
                 <ServiceTile
                     :image="assets.stock_mountains"
                     service-title="Counseling Bundles"
-                    :route="() => router.push('/calendar')"
+                    to="/approachandservices"
                 >
                     <template #body>
                         <p>
@@ -60,7 +56,7 @@ const router = useRouter()
                             the correct decisions are being made every step of the way.
                         </p>
                     </template>
-                </ServiceTile> -->
+                </ServiceTile>
             </div>
         </div>
     </section>
