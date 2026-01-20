@@ -1,24 +1,90 @@
+<script setup lang="ts">
+import { ref, computed, onMounted, onBeforeUnmount, nextTick } from 'vue'
+import collegeLogos from '../../assets/collegeLogos/collegeLogos.ts'
+
+const rows = 8
+const cols = 2
+const visibleRows = 3
+
+const total = rows * cols
+
+const baseImages = computed(() =>
+  Array.from({ length: total }, (_, i) => collegeLogos[i % collegeLogos.length])
+)
+
+const doubledImages = computed(() => [...baseImages.value, ...baseImages.value])
+
+const viewport = ref<HTMLElement | null>(null)
+const scroller = ref<HTMLElement | null>(null)
+
+const scrollDistance = ref(0)
+const duration = ref(0)
+
+let ro: ResizeObserver | null = null
+
+async function updateMeasurements() {
+  if (!viewport.value) return
+
+  const viewportWidth = viewport.value.clientWidth
+  const square = viewportWidth / cols
+
+  const desiredHeight = square * visibleRows
+  viewport.value.style.height = `${desiredHeight}px`
+
+  const totalGridHeight = square * rows
+  scrollDistance.value = totalGridHeight
+
+  const speedPerRow = 7
+  duration.value = Math.max(5, rows * speedPerRow)
+
+  // Force a reflow so animation starts correctly
+  await nextTick()
+  void viewport.value.offsetHeight
+}
+
+onMounted(() => {
+  updateMeasurements()
+
+  ro = new ResizeObserver(updateMeasurements)
+  if (viewport.value) ro.observe(viewport.value)
+})
+
+onBeforeUnmount(() => {
+  if (ro && viewport.value) ro.unobserve(viewport.value)
+})
+</script>
+
+<style>
+@keyframes scroll-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(var(--scroll-distance) * -1));
+  }
+}
+</style>
+
+
 <template>
   <section class="flex flex-col md:flex-row items-center justify-center gap-12 w-full max-w-5xl mx-auto px-4 py-12">
-    
+
+    <!-- Left Side Paragraph -->
     <div class="md:w-1/2 text-center md:text-left space-y-4">
       <h2 class="text-2xl font-semibold text-gray-800">
         Trusted by Families, Recognized by Professionals
       </h2>
       <p class="text-gray-600 leading-relaxed">
-        Our students have been accepted to universities across the country. The colleges seen here represent just a few of the many schools where our guidance has helped applicants succeed. 
+        Our students have been accepted to universities across the country. The colleges seen here represent just a few of the many schools where our guidance has helped applicants succeed.
       </p>
     </div>
 
-    <!-- Scrolling grid component -->
+    <!-- Right Side Scrolling Elements -->
     <div class="md:w-1/2">
-      <div
-        ref="viewport"
-        class="mx-auto overflow-hidden relative w-full"
-        aria-hidden="true"
-      >
+      <div ref="viewport" class="mx-auto overflow-hidden relative w-full" aria-hidden="true">
         <div
           ref="scroller"
+          :key="scrollDistance"
           class="animate-[scroll-up_var(--anim-duration)_linear_infinite] will-change-transform"
           :style="{
             '--scroll-distance': scrollDistance + 'px',
@@ -44,63 +110,3 @@
     </div>
   </section>
 </template>
-
-<script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from 'vue'
-import collegeLogos from '../../assets/collegeLogos/collegeLogos.ts'
-
-const rows = 8
-const cols = 2
-const visibleRows = 3 // 3 rows * 2 columns = 6 visible images
-
-const total = rows * cols
-const baseImages = Array.from({ length: total }, (_, i) =>
-  collegeLogos[i % collegeLogos.length]
-)
-const doubledImages = [...baseImages, ...baseImages]
-
-const viewport = ref<HTMLElement | null>(null)
-const scroller = ref<HTMLElement | null>(null)
-
-const scrollDistance = ref(0)
-const duration = ref(0)
-
-let ro: ResizeObserver | null = null
-
-function updateMeasurements() {
-  if (!viewport.value) return
-
-  const viewportWidth = viewport.value.clientWidth
-  const square = viewportWidth / cols
-
-  const desiredHeight = square * visibleRows
-  viewport.value.style.height = `${desiredHeight}px`
-
-  const totalGridHeight = square * rows
-  scrollDistance.value = totalGridHeight
-
-  const speedPerRow = 7
-  duration.value = Math.max(5, rows * speedPerRow)
-}
-
-onMounted(() => {
-  updateMeasurements()
-  ro = new ResizeObserver(updateMeasurements)
-  if (viewport.value) ro.observe(viewport.value)
-})
-
-onBeforeUnmount(() => {
-  if (ro && viewport.value) ro.unobserve(viewport.value)
-})
-</script>
-
-<style>
-@keyframes scroll-up {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(calc(var(--scroll-distance) * -1));
-  }
-}
-</style>
