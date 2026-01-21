@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import AwardCard from "../tiles/AwardTile.vue";
+</script>
+
 <template>
   <main class="min-h-screen bg-background px-6 py-16 md:px-12 lg:px-24">
     <div class="mx-auto max-w-2xl">
@@ -6,7 +10,7 @@
           Awards & Certifications
         </h1>
         <p class="mt-2 text-muted-foreground">
-          Industry recognition and professional credentials
+          Here are some of the Awards, Certifications, and Commendations I have received during my career as a college counselor
         </p>
       </header>
 
@@ -18,7 +22,8 @@
             year="2024"
           >
             <template #icon>
-              <span class="h-5 w-5 inline-flex items-center justify-center rounded bg-muted text-sm">
+              <span
+                class="h-5 w-5 inline-flex items-center justify-center rounded bg-muted text-sm">
                 Icon
               </span>
             </template>
@@ -30,7 +35,9 @@
             year="2023"
           >
             <template #icon>
-              <span class="h-5 w-5 inline-flex items-center justify-center rounded bg-muted text-sm">
+              <span
+                class="h-5 w-5 inline-flex items-center justify-center rounded bg-muted text-sm"
+              >
                 Icon
               </span>
             </template>
@@ -42,19 +49,19 @@
             year="2023"
           >
             <template #icon>
-              <span class="h-5 w-5 inline-flex items-center justify-center rounded bg-muted text-sm">
+              <span
+                class="h-5 w-5 inline-flex items-center justify-center rounded bg-muted text-sm"
+              >
                 Icon
               </span>
             </template>
           </AwardCard>
 
-          <AwardCard
-            title="ISO 27001"
-            description="Security Certification"
-            year="2022"
-          >
+          <AwardCard title="ISO 27001" description="Security Certification" year="2022">
             <template #icon>
-              <span class="h-5 w-5 inline-flex items-center justify-center rounded bg-muted text-sm">
+              <span
+                class="h-5 w-5 inline-flex items-center justify-center rounded bg-muted text-sm"
+              >
                 Icon
               </span>
             </template>
@@ -66,7 +73,9 @@
             year="2022"
           >
             <template #icon>
-              <span class="h-5 w-5 inline-flex items-center justify-center rounded bg-muted text-sm">
+              <span
+                class="h-5 w-5 inline-flex items-center justify-center rounded bg-muted text-sm"
+              >
                 Icon
               </span>
             </template>
@@ -77,6 +86,3 @@
   </main>
 </template>
 
-<script setup>
-import AwardCard from "../tiles/AwardTile.vue";
-</script>

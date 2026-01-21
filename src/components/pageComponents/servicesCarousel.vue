@@ -8,7 +8,7 @@ const router = useRouter()
 
 <template>
     <section>
-        <div class="flex flex-col justify-center ">
+        <div class="flex flex-col justify-center max-w-6xl mx-auto">
             <h1 class="mt-4 mb-16">My Services</h1>
             <div class="flex justify-between p-0">
                 <ServiceTile
