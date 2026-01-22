@@ -21,7 +21,7 @@ const baseMenuItemClasses =
         </nav>
 
         <div class="text-gray-500 text-sm">
-          © {{ new Date().getFullYear() }} ColEdge Counseling. All rights reserved.
+          © {{ new Date().getFullYear() }} CollEdge Counseling. All rights reserved.
         </div>
       </div>
 
@@ -45,7 +45,7 @@ const baseMenuItemClasses =
           href="mailto:josuamcalister@colledgeacounseling.com"
           class="text-gray-500 hover:text-gray-300"
         >
-          josuamcalister@colledgeacounseling.com
+          JoshuaMcAlister@CollEdgeCounseling.com
         </a>
       </div>
 

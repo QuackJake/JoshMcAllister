@@ -1,48 +1,19 @@
 <script setup lang="ts">
 import assets from '../assets/assets'
-import Landing from '../components/pageComponents/Landing.vue'
-import PreferredColleges from '../components/pageComponents/PreferredColleges.vue'
-import ContactLink from '../components/pageComponents/ContactLink.vue'
-import ServicesCarousel from '../components/pageComponents/ServicesCarousel.vue'
+import HomeLanding from '../components/specific/HomeLanding.vue'
+import PreferredColleges from '../components/specific/PreferredColleges.vue'
+import ContactMeCTA from '../components/specific/ContactMeCTA.vue'
+import ServicesCarousel from '../components/specific/ServicesCarousel.vue'
 </script>
 
 <template>
   <!-- Hero Section -->
-  <Landing />
+  <HomeLanding />
 
   <!-- horizontal line -->
   <div class="h-[2px] bg-black w-3/4 mx-auto my-16"></div>
 
   <PreferredColleges />
-
-  <!-- About Section -->
-  <!-- <section>
-    <div class="p-4">
-      <h1 class="mb-16">My Story, Your Future</h1>
-      <img :src="assets.selfie" alt="Joshua McAlister"
-        class="float-left h-auto max-w-[45vh] mr-16 mb-2 rounded object-cover m-4" />
-      <p class="text-xl text-left">
-        Josh was born in Utah and raised in Wyoming. Having grown up in Wyoming and attended college in Colorado, Josh
-        is no stranger to the Mountain West. He began his journey eastward living in both Arkansas and Tennessee for
-        over a year each eventually leading him to travel to a total of 43 U.S. States. Josh later lived in Taiwan for
-        13 years as an educator and traveled to over 10 countries across Asia and Oceania. In 2015, Josh McAlister had
-        begun serving as a dedicated college counselor, beginning his work at an international school in Taiwan and
-        guiding students through applications to universities across the United States, the United Kingdom, Switzerland,
-        South Africa, and New Zealand. In 2017, Josh moved with his family to continue working as a college counselor at
-        a boarding school in central Utah.
-        <br>
-        <br>
-        With a BA in Political Science, a Masters of Education (M. Ed), and over 20 years of classroom experience in the
-        US and abroad, Josh brings a deep understanding of diverse student pathways, tailoring guidance to each
-        individual’s aspirations and strengths. His student-centered approach prioritizes building meaningful
-        relationships, enabling him to understand students’ unique needs and create supportive programs that boost
-        confidence, reduce stress, and allow them to remain focused on academics, athletics, and social life. Over the
-        past eight years, Josh has further developed his expertise by attending national and regional college counseling
-        conferences, as well as visiting a wide range of colleges and universities, building valuable connections and
-        broadening his knowledge of the higher education landscape.
-      </p>
-    </div>
-  </section> -->
 
   <!-- horizontal line -->
   <div class="h-[2px] bg-black w-3/4 mx-auto my-16"></div>
@@ -56,9 +27,9 @@ import ServicesCarousel from '../components/pageComponents/ServicesCarousel.vue'
   <div class="h-[2px] bg-black w-3/4 mx-auto my-16"></div>
 
   <!-- Contact Me Section -->
-  <contact-link>
+  <ContactMeCTA>
 
-  </contact-link>
+  </ContactMeCTA>
 
   <!-- horizontal line -->
   <div class="mx-auto my-16"></div>

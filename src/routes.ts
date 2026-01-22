@@ -2,7 +2,7 @@ import { createWebHistory, createRouter } from 'vue-router'
 
 import Home from './pages/HomePage.vue'
 import AboutMe from './pages/AboutMe.vue'
-import ApproachAndServices from './pages/ApproachAndServices.vue'
+import Services from './pages/Services.vue'
 import FAQ from './pages/FAQ.vue'
 import ContactMe from './pages/ContactMe.vue'
 
@@ -22,7 +22,7 @@ const routes = [
   // 'main' = Dynamic routes for the NavBar
   { path: '/', name: 'Home', component: Home, meta: { group: 'main' } },
   { path: '/about', name: 'About Me', component: AboutMe, meta: { group: 'main' } },
-  { path: '/approachandservices', name: 'Approach & Services', component: ApproachAndServices, meta: { group: 'main' } },
+  { path: '/services', name: 'My Services', component: Services, meta: { group: 'main' } },
   { path: '/faq', name: 'FAQ', component: FAQ, meta: { group: 'main' } },
   { path: '/contact', name: 'Contact Me', component: ContactMe, meta: { group: 'main' } },
 

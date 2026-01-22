@@ -1,7 +1,8 @@
 <template>
   <li class="py-6 w-2xl grid grid-cols-[auto_1fr_auto] items-center">
     <div class="flex items-center">
-      <slot name="icon"></slot>
+      <img :src="image" alt="" class="h-20 w-20">
+      </img>
     </div>
 
     <div class="text-center">
@@ -15,10 +16,11 @@
   </li>
 </template>
 
-<script setup>
-const props = defineProps({
+<script setup lang="ts">
+defineProps<{
+  image: string,
   title: String,
   description: String,
   year: String,
-});
+}>();
 </script>

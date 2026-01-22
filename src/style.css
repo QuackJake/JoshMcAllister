@@ -91,6 +91,15 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.btn-link {
+  font-weight: 500;
+  color: #000000;
+  text-decoration: inherit;
+}
+.btn-link:hover {
+  color: #000000;
+}
+
 .card {
   padding: 2em;
 }

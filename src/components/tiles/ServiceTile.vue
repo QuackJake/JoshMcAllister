@@ -12,7 +12,7 @@ defineProps<{
   <div
     class="flex flex-col items-center p-8 bg-[#f7f7f7] rounded-2xl shadow-md max-w-[32%] transform transition-transform duration-300 hover:scale-102 hover:shadow-xl cursor-pointer"
   >
-    <RouterLink :to="to">
+    <RouterLink :to="to" class="btn-link">
       <img
         :src="image"
         alt=""

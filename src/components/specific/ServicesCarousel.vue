@@ -14,7 +14,7 @@ const router = useRouter()
                 <ServiceTile
                     :image="assets.stock_mountains"
                     service-title="Junior Year Services"
-                    to="/approachandservices"
+                    to="/services"
                 >
                     <template #body>
                         <p>
@@ -31,7 +31,7 @@ const router = useRouter()
                 <ServiceTile
                     :image="assets.stock_mountains"
                     service-title="Senior Year Services"
-                    to="/approachandservices"
+                    to="/services"
                 >
                     <template #body>
                         <p>
@@ -48,7 +48,7 @@ const router = useRouter()
                 <ServiceTile
                     :image="assets.stock_mountains"
                     service-title="Counseling Bundles"
-                    to="/approachandservices"
+                    to="/services"
                 >
                     <template #body>
                         <p>

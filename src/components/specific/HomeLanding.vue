@@ -14,7 +14,7 @@ import assets from '../../assets/assets'
       <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
 
       <div class="relative z-10 flex flex-col items-center justify-center px-4">
-        <h1 class="title font-bold mb-8">Col-Edge Counseling</h1>
+        <h1 class="title font-bold mb-8">Coll-Edge Counseling</h1>
         <div class="subtitle font-bold text-4xl">"Get an Edge on Your College Journey"</div>
       </div>
     </div>

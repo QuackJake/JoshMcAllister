@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
+import ButtonWithArrow from '../common/ButtonWithArrow.vue'
 </script>
 
 <template>
@@ -11,10 +12,8 @@ import { useRouter } from 'vue-router'
       <p class="text-gray-600 mb-6">
         I'm here to help. Send me an email or reach out with our available resources to get in contact.
       </p>
-      <RouterLink to="/contact">
-        <button class="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-          Contact Us Today
-        </button>
-      </RouterLink>
+      <ButtonWithArrow 
+        text="Contact Me Today"
+      />
     </div>
 </template>

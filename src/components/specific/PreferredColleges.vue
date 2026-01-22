@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onBeforeUnmount, nextTick } from 'vue'
 import collegeLogos from '../../assets/collegeLogos/collegeLogos.ts'
+import ButtonWithArrow from '../common/ButtonWithArrow.vue'
 
 const rows = 8
 const cols = 2
@@ -73,9 +74,14 @@ onBeforeUnmount(() => {
       <h2 class="text-2xl font-semibold text-gray-800">
         Trusted by Families, Recognized by Professionals
       </h2>
-      <p class="text-gray-600 leading-relaxed">
+      <p class="text-gray-600 leading-relaxed mb-8">
         Our students have been accepted to universities across the country. The colleges seen here represent just a few of the many schools where our guidance has helped applicants succeed.
       </p>
+
+      <ButtonWithArrow
+        text="Learn More About Me"
+      >
+      </ButtonWithArrow>
     </div>
 
     <!-- Right Side Scrolling Elements -->

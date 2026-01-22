@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import assets from "../assets/assets";
-import Bio from "../components/pageComponents/Bio.vue"
-import Testimonials from "../components/pageComponents/Testimonials.vue"
-import AwardsAndCertifications from "../components/pageComponents/AwardsAndCertifications.vue"
+import Bio from "../components/specific/Bio.vue"
+import Testimonials from "../components/specific/Testimonials.vue"
+import AwardsAndCertifications from "../components/specific/AwardsAndCertifications.vue"
 import ImageGallery from "../components/imageGallery/imageGallery.vue";
 </script>
 
