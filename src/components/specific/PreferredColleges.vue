@@ -80,6 +80,7 @@ onBeforeUnmount(() => {
 
       <ButtonWithArrow
         text="Learn More About Me"
+        to="/about"
       >
       </ButtonWithArrow>
     </div>

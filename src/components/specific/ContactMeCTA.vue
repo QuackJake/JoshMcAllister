@@ -14,6 +14,7 @@ import ButtonWithArrow from '../common/ButtonWithArrow.vue'
       </p>
       <ButtonWithArrow 
         text="Contact Me Today"
+        to="/contact"
       />
     </div>
 </template>

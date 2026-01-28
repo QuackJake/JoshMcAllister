@@ -15,6 +15,8 @@ import TermsAndConditions from './pages/compliance/TermsAndConditions.vue'
 import Calendar from './pages/services/Calendar.vue'
 import Purchase from './pages/services/Purchase.vue'
 import Schedule from './pages/services/Schedule.vue'
+import Junior from './pages/services/Junior.vue'
+import Senior from './pages/services/Senior.vue'
 
 import NotFound from './pages/NotFound.vue'
 
@@ -23,7 +25,7 @@ const routes = [
   { path: '/', name: 'Home', component: Home, meta: { group: 'main' } },
   { path: '/about', name: 'About Me', component: AboutMe, meta: { group: 'main' } },
   { path: '/services', name: 'My Services', component: Services, meta: { group: 'main' } },
-  { path: '/faq', name: 'FAQ', component: FAQ, meta: { group: 'main' } },
+  { path: '/faq', name: 'FAQ', component: Purchase, meta: { group: 'main' } },
   { path: '/contact', name: 'Contact Me', component: ContactMe, meta: { group: 'main' } },
 
   // 'compliance' = Dynamic routes for the hidden compliance pages accessible only from the footer links
@@ -37,6 +39,8 @@ const routes = [
   { path: '/calendar', name: 'Calendar', component: Calendar, meta: { group: 'service' } },
   { path: '/purchase', name: 'Purchase', component: Purchase, meta: { group: 'service' } },
   { path: '/schedule', name: 'Schedule', component: Schedule, meta: { group: 'service' } },
+  { path: '/junior', name: 'Junior', component: Junior, meta: { group: 'service' } },
+  { path: '/senior', name: 'Senior', component: Senior, meta: { group: 'service' } },
 
   { path: '/:pathMatch(.*)*', redirect: '/notfound' }
 

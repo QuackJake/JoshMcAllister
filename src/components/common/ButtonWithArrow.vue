@@ -12,9 +12,9 @@ defineProps<{
 <template>
   <RouterLink
     :to="to"
-    class="btn-link inline-flex items-center gap-2 px-4 py-2 rounded-md
+    class="btn-link bg-white inline-flex items-center gap-2 px-4 py-2 rounded-md
            font-medium
-           hover:bg-gray-50 focus:outline-none focus-visible:ring "
+           hover:bg-gray-200 focus:outline-none focus-visible:ring "
   >
     <span>{{ text }}</span>
     <img
