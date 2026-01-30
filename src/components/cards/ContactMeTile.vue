@@ -59,15 +59,23 @@
 </script>
 
 <template>
-  <form @submit.prevent="onSubmit" class="max-w-2xl h-auto mx-auto p-4 space-y-3 bg-gray-50 rounded-lg shadow-sm">
+  <form
+    class="max-w-2xl h-auto mx-auto p-4 space-y-3 bg-gray-50 rounded-lg shadow-sm"
+    @submit.prevent="onSubmit"
+  >
     <input
       id="name"
       v-model="form.name"
       type="text"
       placeholder="Name"
       class="border p-2 w-full rounded"
-    />
-    <p v-if="errors.name" class="text-red-600 text-xs">{{ errors.name }}</p>
+    >
+    <p
+      v-if="errors.name"
+      class="text-red-600 text-xs"
+    >
+      {{ errors.name }}
+    </p>
 
     <input
       id="email"
@@ -75,8 +83,13 @@
       type="email"
       placeholder="Email"
       class="border p-2 w-full rounded"
-    />
-    <p v-if="errors.email" class="text-red-600 text-xs">{{ errors.email }}</p>
+    >
+    <p
+      v-if="errors.email"
+      class="text-red-600 text-xs"
+    >
+      {{ errors.email }}
+    </p>
 
     <textarea
       id="message"
@@ -84,10 +97,18 @@
       placeholder="Message"
       rows="3"
       class="border p-2 w-full rounded"
-    ></textarea>
-    <p v-if="errors.message" class="text-red-600 text-xs m-y-0">{{ errors.message }}</p>
+    />
+    <p
+      v-if="errors.message"
+      class="text-red-600 text-xs m-y-0"
+    >
+      {{ errors.message }}
+    </p>
 
-    <button type="submit" class="w-full">
+    <button
+      type="submit"
+      class="w-full"
+    >
       Send Message
     </button>
   </form>

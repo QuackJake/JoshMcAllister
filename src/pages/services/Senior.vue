@@ -18,18 +18,18 @@
 </script>
 
 <template> 
-    <section>
-        Senior-Year Services
-    </section>
+  <section>
+    Senior-Year Services
+  </section>
 
-    <div class="calendly-wrapper">
-        <div
-        ref="calendly"
-        class="calendly-inline-widget"
-        data-url="https://calendly.com/jake-qbushed/30min"
-        style="min-width:320px;height:700px;"
-        ></div>
-    </div>
+  <div class="calendly-wrapper">
+    <div
+      ref="calendly"
+      class="calendly-inline-widget"
+      data-url="https://calendly.com/jake-qbushed/30min"
+      style="min-width:320px;height:700px;"
+    />
+  </div>
 </template>
 
 <style scoped>

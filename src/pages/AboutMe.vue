@@ -1,31 +1,30 @@
 <script setup lang="ts">
-import assets from "../assets/assets";
-import Bio from "../components/specific/Bio.vue"
-import Testimonials from "../components/specific/Testimonials.vue"
-import AwardsAndCertifications from "../components/specific/AwardsAndCertifications.vue"
-import ImageGallery from "../components/imageGallery/imageGallery.vue";
+// import assets from '@/assets/assets';
+import Bio from '@/components/specific/Bio.vue';
+// import Testimonials from '@/components/specific/Testimonials.vue';
+// import AwardsAndCertifications from '@/components/specific/AwardsAndCertifications.vue';
+// import ImageGallery from '@/components/imageGallery/imageGallery.vue';
+import ContactMeCTA from '@/components/common/ContactMeCTA.vue'
 </script>
 
 <template>
   <Bio />
 
-  <!-- horizontal line -->
-  <!-- <div class="h-[2px] bg-black w-3/4 mx-auto my-16"></div> -->
+  <!-- <hr class="hr-line" /> -->
   <!-- Removing for now, awaiting comments from Josh -->
   <!-- <section>My Work</section> -->
 
-  <!-- horizontal line -->
-  <div class="h-[2px] bg-black w-3/4 mx-auto my-16"></div>
+  <hr class="hr-line">
 
-  <Testimonials />
+  <!-- <Testimonials />
 
-  <!-- horizontal line -->
-  <div class="h-[2px] bg-black w-3/4 mx-auto my-16"></div>
+  <hr class="hr-line" />
 
   <AwardsAndCertifications />
 
-  <!-- horizontal line -->
-  <div class="h-[2px] bg-black w-3/4 mx-auto my-16"></div>
+  <hr class="hr-line" />
 
-  <ImageGallery> </ImageGallery>
+  <ImageGallery> </ImageGallery> -->
+
+  <ContactMeCTA />
 </template>

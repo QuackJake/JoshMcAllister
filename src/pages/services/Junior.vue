@@ -18,18 +18,18 @@
 </script>
 
 <template> 
-    <section>
-        Junior-Year Services
-    </section>
+  <section>
+    Junior-Year Services
+  </section>
 
-    <div class="calendly-wrapper">
-        <div
-        ref="calendly"
-        class="calendly-inline-widget"
-        data-url="https://calendly.com/jake-qbushed/test-2"
-        style="min-width:320px;height:700px;"
-        ></div>
-    </div>
+  <div class="calendly-wrapper">
+    <div
+      ref="calendly"
+      class="calendly-inline-widget"
+      data-url="https://calendly.com/jake-qbushed/test-2"
+      style="min-width:320px;height:700px;"
+    />
+  </div>
 </template>
 
 <style scoped>

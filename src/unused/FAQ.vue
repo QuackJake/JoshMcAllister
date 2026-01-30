@@ -3,8 +3,12 @@
     <!-- Header -->
     <header class="border-b border-slate-200 bg-white/80 backdrop-blur-sm">
       <div class="mx-auto max-w-7xl px-6 py-8">
-        <h1 class="text-4xl font-bold text-slate-900">Frequently Asked Questions</h1>
-        <p class="mt-2 text-slate-600">Find answers to common questions about our services</p>
+        <h1 class="text-4xl font-bold text-slate-900">
+          Frequently Asked Questions
+        </h1>
+        <p class="mt-2 text-slate-600">
+          Find answers to common questions about our services
+        </p>
       </div>
     </header>
 
@@ -35,7 +39,10 @@
                   faq.color
                 ]"
               >
-                <component :is="faq.icon" class="h-6 w-6" />
+                <component
+                  :is="faq.icon"
+                  class="h-6 w-6"
+                />
               </div>
               <h3 class="text-lg font-semibold text-slate-900 leading-snug">
                 {{ faq.question }}
@@ -43,8 +50,18 @@
             </div>
             <div class="flex items-center text-sm font-medium text-slate-500">
               <span>Click to expand</span>
-              <svg class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              <svg
+                class="ml-2 h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
               </svg>
             </div>
           </div>
@@ -63,14 +80,27 @@
                   faq.color
                 ]"
               >
-                <component :is="faq.icon" class="h-6 w-6" />
+                <component
+                  :is="faq.icon"
+                  class="h-6 w-6"
+                />
               </div>
               <button
                 class="ml-4 rounded-lg p-2 text-slate-400 hover:bg-slate-100 hover:text-slate-600 transition-colors"
                 @click.stop="toggleFaq(index)"
               >
-                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                <svg
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               </button>
             </div>

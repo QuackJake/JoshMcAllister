@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <h1>
-        Services Agreement
-    </h1>
+  <h1>
+    Services Agreement
+  </h1>
 </template>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import svgs from "../../assets/svgs/svgs.ts";
-// import pngs from "../../assets/pngs/pngs.ts";
+import svgs from "@/assets/svgs/svgs.ts";
+// import pngs from "@/assets/pngs/pngs.ts";
 import { RouterLink } from "vue-router";
 
 defineProps<{
@@ -21,6 +21,6 @@ defineProps<{
       :src="svgs.arrowRight"
       alt=""
       class="w-5 h-5 object-contain"
-    />
+    >
   </RouterLink>
 </template>

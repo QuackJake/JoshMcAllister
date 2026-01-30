@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import galleryImages from "../../assets/galleryImages/galleryImages";
+import galleryImages from "@/assets/galleryImages/galleryImages";
 import GalleryRow from "./galleryRow.vue";
 </script>
 

@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <h1>
-        Disclaimer
-    </h1>
+  <h1>
+    Disclaimer
+  </h1>
 </template>

@@ -1,6 +1,6 @@
 <script setup>
-import TestimonialTile from "../tiles/TestimonialTile.vue"
-import assets from "../../assets/assets";
+import TestimonialTile from "../cards/TestimonialTile.vue"
+import assets from "@/assets/assets";
 </script>
 
 <template>
@@ -21,10 +21,13 @@ import assets from "../../assets/assets";
           name="Josh McAlister"
           subtitle="Class of 2025"
           text="This platform completely transformed how our team collaborates. We've seen a 40% increase in productivity since implementation, and our engineers actually enjoy using it daily."
-          collegeName="Dartmouth College"
+          college-name="Dartmouth College"
         >
           <template #collegeIcon>
-            <img src="../../assets/collegeLogos/dartmouthCollege.png" class="float-left h-8 w-8 rounded-xl object-cover" />
+            <img
+              src="@/assets/collegeLogos/dartmouthCollege.png"
+              class="float-left h-8 w-8 rounded-xl object-cover"
+            >
           </template>
         </TestimonialTile>
 
@@ -33,10 +36,13 @@ import assets from "../../assets/assets";
           name="Josh McAlister"
           subtitle="Class of 2025"
           text="This platform completely transformed how our team collaborates. We've seen a 40% increase in productivity since implementation, and our engineers actually enjoy using it daily."
-          collegeName="Dartmouth College"
+          college-name="Dartmouth College"
         >
           <template #collegeIcon>
-            <img src="../../assets/collegeLogos/dartmouthCollege.png" class="float-left h-8 w-8 rounded-xl object-cover" />
+            <img
+              src="@/assets/collegeLogos/dartmouthCollege.png"
+              class="float-left h-8 w-8 rounded-xl object-cover"
+            >
           </template>
         </TestimonialTile>
 
@@ -45,10 +51,13 @@ import assets from "../../assets/assets";
           name="Josh McAlister"
           subtitle="Class of 2025"
           text="This platform completely transformed how our team collaborates. We've seen a 40% increase in productivity since implementation, and our engineers actually enjoy using it daily."
-          collegeName="Dartmouth College"
+          college-name="Dartmouth College"
         >
           <template #collegeIcon>
-            <img src="../../assets/collegeLogos/dartmouthCollege.png" class="float-left h-8 w-8 rounded-xl object-cover" />
+            <img
+              src="@/assets/collegeLogos/dartmouthCollege.png"
+              class="float-left h-8 w-8 rounded-xl object-cover"
+            >
           </template>
         </TestimonialTile>
 
@@ -57,10 +66,13 @@ import assets from "../../assets/assets";
           name="Josh McAlister"
           subtitle="Class of 2025"
           text="This platform completely transformed how our team collaborates. We've seen a 40% increase in productivity since implementation, and our engineers actually enjoy using it daily."
-          collegeName="Dartmouth College"
+          college-name="Dartmouth College"
         >
           <template #collegeIcon>
-            <img src="../../assets/collegeLogos/dartmouthCollege.png" class="float-left h-8 w-8 rounded-xl object-cover" />
+            <img
+              src="@/assets/collegeLogos/dartmouthCollege.png"
+              class="float-left h-8 w-8 rounded-xl object-cover"
+            >
           </template>
         </TestimonialTile>
 
@@ -69,10 +81,13 @@ import assets from "../../assets/assets";
           name="Josh McAlister"
           subtitle="Class of 2025"
           text="This platform completely transformed how our team collaborates. We've seen a 40% increase in productivity since implementation, and our engineers actually enjoy using it daily."
-          collegeName="Dartmouth College"
+          college-name="Dartmouth College"
         >
           <template #collegeIcon>
-            <img src="../../assets/collegeLogos/dartmouthCollege.png" class="float-left h-8 w-8 rounded-xl object-cover" />
+            <img
+              src="@/assets/collegeLogos/dartmouthCollege.png"
+              class="float-left h-8 w-8 rounded-xl object-cover"
+            >
           </template>
         </TestimonialTile>
 
@@ -81,10 +96,13 @@ import assets from "../../assets/assets";
           name="Josh McAlister"
           subtitle="Class of 2025"
           text="This platform completely transformed how our team collaborates. We've seen a 40% increase in productivity since implementation, and our engineers actually enjoy using it daily."
-          collegeName="Dartmouth College"
+          college-name="Dartmouth College"
         >
           <template #collegeIcon>
-            <img src="../../assets/collegeLogos/dartmouthCollege.png" class="float-left h-8 w-8 rounded-xl object-cover" />
+            <img
+              src="@/assets/collegeLogos/dartmouthCollege.png"
+              class="float-left h-8 w-8 rounded-xl object-cover"
+            >
           </template>
         </TestimonialTile>
       </div>

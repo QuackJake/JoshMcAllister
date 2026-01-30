@@ -1,17 +1,19 @@
 <script setup lang="ts">
-import assets from "../../assets/assets";
+import assets from "@/assets/assets";
 </script>
 
 <template>
   <section class="h-[100vh]">
     <div class="max-w-6xl mx-auto px-6">
-      <h1 class="mb-8">My Story, Your Future</h1>
+      <h1 class="mb-8">
+        My Story, Your Future
+      </h1>
       <div class="text-left text-lg">
         <img
           :src="assets.selfie"
           alt="Joshua McAlister"
           class="float-left h-auto max-w-[45vh] mr-12 my-4 rounded-xl object-cover"
-        />
+        >
         <p>
           Josh was born in Utah and raised in Wyoming. Having grown up in Wyoming and
           attended college in Colorado, Josh is no stranger to the Mountain West. He began
@@ -24,8 +26,8 @@ import assets from "../../assets/assets";
           the United Kingdom, Switzerland, South Africa, and New Zealand. In 2017, Josh
           moved with his family to continue working as a college counselor at a boarding
           school in central Utah.
-          <br />
-          <br />
+          <br>
+          <br>
         </p>
         <p>
           With a BA in Political Science, a Masters of Education (M. Ed), and over 20
@@ -39,8 +41,8 @@ import assets from "../../assets/assets";
           by attending national and regional college counseling conferences, as well as
           visiting a wide range of colleges and universities, building valuable
           connections and broadening his knowledge of the higher education landscape.
-          <br />
-          <br />
+          <br>
+          <br>
         </p>
         <p>
           Josh feels most at home outdoors. He loves snowboarding in the winter,
@@ -50,8 +52,8 @@ import assets from "../../assets/assets";
           nine national parks and plenty of state parks, usually with their golden
           retriever, Koopa, tagging along. And when he’s not out on an adventure, you can
           usually find Josh chasing a ball—or watching one being chased.
-          <br />
-          <br />
+          <br>
+          <br>
         </p>
       </div>
     </div>

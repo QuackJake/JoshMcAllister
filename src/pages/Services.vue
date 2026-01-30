@@ -1,8 +1,7 @@
 <script setup>
-import ServiceCard from "../components/tiles/ServiceCard.vue";
-import assets from '../assets/assets';
-
-import { useRouter } from 'vue-router'
+import ServiceCard from '@/components/cards/ServiceCard.vue';
+import assets from '@/assets/assets';
+import ContactMeCTA from '@/components/common/ContactMeCTA.vue'
 
 const juniorYearFeatures = [
   "College and Interest discovery",
@@ -28,6 +27,24 @@ const enterpriseServiceFeatures = [
   "24/7 priority support",
   "SLA guarantees",
 ];
+
+const features = [
+  {
+    title: "Goal Clarity",
+    description:
+      "Identify your priorities and create a roadmap to meet them effectively.",
+  },
+  {
+    title: "Strategic Planning",
+    description:
+      "Get expert advice on application strategy, essay guidance, and decision-making.",
+  },
+  {
+    title: "Comprehensive Success",
+    description:
+      "Combine multiple sessions and services to cover every aspect of the process.",
+  },
+];
 </script>
 
 <template>
@@ -42,92 +59,82 @@ const enterpriseServiceFeatures = [
       </p>
     </header>
 
-    <!-- Main -->
-    <main class="max-w-6xl mx-auto px-4 pb-20">
+    <main class="max-w-6xl mx-auto px-4">
+      <!-- Bundles -->
+      <div class="max-w-4xl mx-auto mb-6">
+        <ServiceCard
+          title="Bundles and Packages"
+          :show-price="false"
+          description="Individual services include one personalized session each, while the bundled package provides multiple meetings to ensure a comprehensive, full experience."
+          :features="enterpriseServiceFeatures"
+          button-text="Contact Me"
+          to="/calendar"
+          featured
+        />
+      </div>
 
       <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-16">
-        
         <ServiceCard
           title="Junior-Year"
-          price="499"
-          period="meeting"
-          :showPrice="true"
+          price="75"
+          period="hour"
+          :show-price="true"
           description="Junior-Year Services focus on exploration, planning academics/extracurriculars, and creating a personalized college roadmap."
           :features="juniorYearFeatures"
-          buttonText="Choose Plan"
+          button-text="Choose Plan"
           to="/junior"
-        >
-        </ServiceCard>
+        />
 
         <ServiceCard
           title="Senior-Year"
-          price="999"
-          period="meeting"
-          :showPrice="true"
+          price="75"
+          period="hour"
+          :show-price="true"
           description="Senior-Year services focus on finalizing applications, essays, and college choices with personalized guidance and support."
           :features="seniorYearFeatures"
-          buttonText="Get Started"
+          button-text="Get Started"
           to="/senior"
-        >
-        </ServiceCard>
-      </div>
-
-      <!-- Bundles -->
-      <div class="max-w-4xl mx-auto">
-        <ServiceCard
-          title="Bundles and Packages"
-          :showPrice="false"
-          description="Individual services include one personalized session each, while the bundled package provides multiple meetings to ensure a comprehensive, full experience."
-          :features="enterpriseServiceFeatures"
-          buttonText="Contact Me"
-          to="/calendar"
-        >
-        </ServiceCard>
+        />
       </div>
     </main>
 
+    <div class="h-[2px] bg-black w-3/4 mx-auto my-16" /> <!-- horizontal line -->
+
     <!-- Features Highlight -->
-    <section class="py-16 px-4">
+    <div>
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="font-bold mb-12">
           Results Tailored for Each Step
         </h2>
 
-        <div class="grid md:grid-cols-3 gap-8">
-          <div>
-            <div class="w-16 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
+        <div class="grid md:grid-cols-3 gap-12">
+          <div
+            v-for="feature in features"
+            :key="feature.title"
+          >
+            <div
+              class="rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4"
+            >
               <img
                 :src="assets.test_logo"
                 alt=""
-              />
+                class="w-16 h-16"
+              >
             </div>
-            <h3 class="font-semibold mb-2">Goal Clarity</h3>
-            <p class="text-muted-foreground ">Identify your priorities and create a roadmap to meet them effectively..</p>
-          </div>
 
-          <div>
-            <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
-              <img
-                :src="assets.test_logo"
-                alt=""
-              />
-            </div>
-            <h3 class="font-semibold mb-2">Strategic Planning</h3>
-            <p class="text-muted-foreground">Get expert advice on application strategy, essay guidance, and decision-making.</p>
-          </div>
-
-          <div>
-            <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
-              <img
-                :src="assets.test_logo"
-                alt=""
-              />
-            </div>
-            <h3 class="font-semibold mb-2">Comprehensive Success</h3>
-            <p class="text-muted-foreground">Combine multiple sessions and services to cover every aspect of the process.</p>
+            <h3 class="font-semibold mb-2">
+              {{ feature.title }}
+            </h3>
+            <p class="text-muted-foreground">
+              {{ feature.description }}
+            </p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   </div>
+
+  <hr class="hr-line">
+
+  <ContactMeCTA />
 </template>

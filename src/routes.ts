@@ -3,8 +3,8 @@ import { createWebHistory, createRouter } from 'vue-router'
 import Home from './pages/HomePage.vue'
 import AboutMe from './pages/AboutMe.vue'
 import Services from './pages/Services.vue'
-import FAQ from './pages/FAQ.vue'
-import ContactMe from './pages/ContactMe.vue'
+// import FAQ from './pages/FAQ.vue'
+// import ContactMe from './pages/ContactMe.vue'
 
 import Cookies from './pages/compliance/Cookies.vue'
 import Disclaimer from './pages/compliance/Disclaimer.vue'
@@ -18,15 +18,15 @@ import Schedule from './pages/services/Schedule.vue'
 import Junior from './pages/services/Junior.vue'
 import Senior from './pages/services/Senior.vue'
 
-import NotFound from './pages/NotFound.vue'
+// import NotFound from './pages/NotFound.vue'
 
 const routes = [
   // 'main' = Dynamic routes for the NavBar
   { path: '/', name: 'Home', component: Home, meta: { group: 'main' } },
   { path: '/about', name: 'About Me', component: AboutMe, meta: { group: 'main' } },
   { path: '/services', name: 'My Services', component: Services, meta: { group: 'main' } },
-  { path: '/faq', name: 'FAQ', component: Purchase, meta: { group: 'main' } },
-  { path: '/contact', name: 'Contact Me', component: ContactMe, meta: { group: 'main' } },
+  // { path: '/faq', name: 'FAQ', component: Purchase, meta: { group: 'main' } },
+  // { path: '/contact', name: 'Contact Me', component: ContactMe, meta: { group: 'main' } },
 
   // 'compliance' = Dynamic routes for the hidden compliance pages accessible only from the footer links
   { path: '/cookies', name: 'Cookies', component: Cookies, meta: { group: 'compliance' } },
@@ -50,4 +50,10 @@ const routes = [
 export const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    }
+    return { top: 0, behavior: "smooth" }
+  }
 })

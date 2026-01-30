@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onBeforeUnmount, nextTick } from 'vue'
-import collegeLogos from '../../assets/collegeLogos/collegeLogos.ts'
+import collegeLogos from '@/assets/collegeLogos/collegeLogos.ts'
 import ButtonWithArrow from '../common/ButtonWithArrow.vue'
 
 const rows = 8
@@ -54,21 +54,8 @@ onBeforeUnmount(() => {
 })
 </script>
 
-<style>
-@keyframes scroll-up {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(calc(var(--scroll-distance) * -1));
-  }
-}
-</style>
-
-
 <template>
   <section class="flex flex-col md:flex-row items-center justify-center gap-12 w-full max-w-6xl mx-auto px-4 py-12">
-
     <!-- Left Side Paragraph -->
     <div class="md:w-1/2 text-center md:text-left space-y-4">
       <h2 class="text-2xl font-semibold text-gray-800">
@@ -81,13 +68,16 @@ onBeforeUnmount(() => {
       <ButtonWithArrow
         text="Learn More About Me"
         to="/about"
-      >
-      </ButtonWithArrow>
+      />
     </div>
 
     <!-- Right Side Scrolling Elements -->
     <div class="md:w-1/2">
-      <div ref="viewport" class="mx-auto overflow-hidden relative w-full" aria-hidden="true">
+      <div
+        ref="viewport"
+        class="mx-auto overflow-hidden relative w-full"
+        aria-hidden="true"
+      >
         <div
           ref="scroller"
           :key="scrollDistance"
@@ -108,7 +98,7 @@ onBeforeUnmount(() => {
                 alt=""
                 draggable="false"
                 class="w-full h-full object-contain block select-none pointer-events-none"
-              />
+              >
             </div>
           </div>
         </div>
@@ -116,3 +106,15 @@ onBeforeUnmount(() => {
     </div>
   </section>
 </template>
+
+
+<style>
+@keyframes scroll-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(var(--scroll-distance) * -1));
+  }
+}
+</style>

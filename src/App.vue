@@ -1,16 +1,16 @@
 <script setup lang="ts">
-  import Navbar from './components/layouts/Navbar.vue'
-  import Footer from './components/layouts/Footer.vue'
+  import NavigationBar from './components/layouts/NavigationBar.vue'
+  import PageFooter from './components/layouts/PageFooter.vue'
   // import Header from './components/components/Header.vue'
 </script>
 
 <template>
-    <!-- <Header /> -->
-    <Navbar />
-    <div class="w-[85%] mx-auto">
-      <router-view />
-    </div>
-    <Footer />
+  <!-- <Header /> -->
+  <NavigationBar />
+  <div class="w-[85%] mx-auto">
+    <router-view />
+  </div>
+  <PageFooter />
 </template>
 
 <style scoped>

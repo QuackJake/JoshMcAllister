@@ -114,6 +114,14 @@ img {
   pointer-events: none;
 }
 
+.hr-line {
+  height: 2px;
+  background-color: #000;
+  width: 75%;
+  margin: 4rem auto;
+  border: none;
+}
+
 #app {
   width: 100%;
   max-width: full;
