@@ -59,9 +59,9 @@ defineProps<{
       </li>
     </ul>
 
-    <ButtonWithArrow
+    <!-- <ButtonWithArrow
       :text="buttonText"
       :to="to"
-    />
+    /> -->
   </div>
 </template>

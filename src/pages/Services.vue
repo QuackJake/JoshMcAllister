@@ -1,7 +1,8 @@
 <script setup>
 import ServiceCard from '@/components/cards/ServiceCard.vue';
 import assets from '@/assets/assets';
-import ContactMeCTA from '@/components/common/ContactMeCTA.vue'
+import ContactMeCTA from '@/components/common/ContactMeCTA.vue';
+import ButtonWithArrow from "@/components/common/ButtonWithArrow.vue";
 
 const juniorYearFeatures = [
   "College and Interest discovery",
@@ -67,8 +68,6 @@ const features = [
           :show-price="false"
           description="Individual services include one personalized session each, while the bundled package provides multiple meetings to ensure a comprehensive, full experience."
           :features="enterpriseServiceFeatures"
-          button-text="Contact Me"
-          to="/calendar"
           featured
         />
       </div>
@@ -96,6 +95,17 @@ const features = [
           to="/senior"
         />
       </div>
+      <div class="max-w-4xl mx-auto text-center mt-8">
+        <p class="text-lg text-muted-foreground mb-4">
+          Ready to take the next step? Schedule your initial consultation and get personalized guidance for your college journey.
+        </p>
+        <ButtonWithArrow
+          text="Schedule Your Initial Consultation"
+          to="/calendar"
+          class="mx-auto"
+        />
+      </div>
+
     </main>
 
     <div class="h-[2px] bg-black w-3/4 mx-auto my-16" /> <!-- horizontal line -->

@@ -6,17 +6,12 @@ import Services from './pages/Services.vue'
 // import FAQ from './pages/FAQ.vue'
 // import ContactMe from './pages/ContactMe.vue'
 
-import Cookies from './pages/compliance/Cookies.vue'
 import Disclaimer from './pages/compliance/Disclaimer.vue'
 import Privacy from './pages/compliance/Privacy.vue'
 import ServicesAgreement from './pages/compliance/ServicesAgreement.vue'
-import TermsAndConditions from './pages/compliance/TermsAndConditions.vue'
 
 import Calendar from './pages/services/Calendar.vue'
 import Purchase from './pages/services/Purchase.vue'
-import Schedule from './pages/services/Schedule.vue'
-import Junior from './pages/services/Junior.vue'
-import Senior from './pages/services/Senior.vue'
 
 // import NotFound from './pages/NotFound.vue'
 
@@ -29,18 +24,13 @@ const routes = [
   // { path: '/contact', name: 'Contact Me', component: ContactMe, meta: { group: 'main' } },
 
   // 'compliance' = Dynamic routes for the hidden compliance pages accessible only from the footer links
-  { path: '/cookies', name: 'Cookies', component: Cookies, meta: { group: 'compliance' } },
   { path: '/disclaimer', name: 'Disclaimer', component: Disclaimer, meta: { group: 'compliance' } },
   { path: '/privacy', name: 'Privacy Policy', component: Privacy, meta: { group: 'compliance' } },
   { path: '/servicesagreement', name: 'Services Agreement', component: ServicesAgreement, meta: { group: 'compliance' } },
-  { path: '/termsandconditions', name: 'Terms & Conditions', component: TermsAndConditions, meta: { group: 'compliance' } },
 
   // 'service' = Dynamic routes for the services and Acuity pages
   { path: '/calendar', name: 'Calendar', component: Calendar, meta: { group: 'service' } },
   { path: '/purchase', name: 'Purchase', component: Purchase, meta: { group: 'service' } },
-  { path: '/schedule', name: 'Schedule', component: Schedule, meta: { group: 'service' } },
-  { path: '/junior', name: 'Junior', component: Junior, meta: { group: 'service' } },
-  { path: '/senior', name: 'Senior', component: Senior, meta: { group: 'service' } },
 
   { path: '/:pathMatch(.*)*', redirect: '/notfound' }
 
