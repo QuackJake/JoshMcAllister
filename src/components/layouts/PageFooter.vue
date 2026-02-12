@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { CONTACT_EMAIL } from "@/config/site"
 
-const baseMenuItemClasses =
-  "menu-item transition-colors duration-150 ease-in-out";
+// const baseMenuItemClasses = "menu-item transition-colors duration-150 ease-in-out";
 </script>
 
 <template>
@@ -10,7 +9,7 @@ const baseMenuItemClasses =
     <div class="flex flex-col md:flex-row md:justify-between px-6 py-4">
       <!-- Right Side -->
       <div class="flex-1 flex flex-col md:items-end mb-6 md:mb-0">
-        <nav class="flex flex-wrap justify-start md:justify-end gap-4 mb-4">
+        <!-- <nav class="flex flex-wrap justify-start md:justify-end gap-4 mb-4">
           <a
             v-for="item in mainRoutes"
             :key="item.path"
@@ -19,7 +18,7 @@ const baseMenuItemClasses =
           >
             {{ item.name }}
           </a>
-        </nav>
+        </nav> -->
 
         <div class="text-gray-500 text-sm">
           © {{ new Date().getFullYear() }} CollEdge Counseling. All rights reserved.
@@ -31,7 +30,7 @@ const baseMenuItemClasses =
 
       <!-- Left Side -->
       <div class="flex-1 flex flex-col md:items-start">
-        <nav class="flex flex-wrap justify-start gap-4 mb-4">
+        <!-- <nav class="flex flex-wrap justify-start gap-4 mb-4">
           <a
             v-for="item in complianceRoutes"
             :key="item.path"
@@ -40,7 +39,7 @@ const baseMenuItemClasses =
           >
             {{ item.name }}
           </a>
-        </nav>
+        </nav> -->
 
         <a
           href="mailto:josuamcalister@colledgeacounseling.com"

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ButtonWithArrow from "../common/ButtonWithArrow.vue";
+// import ButtonWithArrow from "../common/ButtonWithArrow.vue";
 defineProps<{
   title: string;
   price: string;

@@ -4,7 +4,7 @@ import { onMounted, ref } from 'vue'
 const calendly = ref<HTMLElement | null>(null)
 
 function loadCalendlyScript() {
-  if ((window as any).Calendly) return
+  // if (window.Calendly) return
 
   const script = document.createElement('script')
   script.src = 'https://assets.calendly.com/assets/external/widget.js'

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import svgs from "@/assets/svgs/svgs.ts"
+import svgs from "@/assets/svgs/svgs"
 
-import { CONTACT_EMAIL, DEFAULT_EMAIL_SUBJECT, DEFAULT_EMAIL_BODY } from "@/config/site"
+import { CONTACT_EMAIL, DEFAULT_EMAIL_SUBJECT, DEFAULT_EMAIL_BODY } from "@/config/site.ts"
 
 defineProps<{
   text: string

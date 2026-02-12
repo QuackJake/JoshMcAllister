@@ -105,7 +105,6 @@ const features = [
           class="mx-auto"
         />
       </div>
-
     </main>
 
     <div class="h-[2px] bg-black w-3/4 mx-auto my-16" /> <!-- horizontal line -->

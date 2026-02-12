@@ -156,7 +156,7 @@ const Chat = () => h('svg', { fill: 'none', viewBox: '0 0 24 24', stroke: 'curre
 interface FAQ {
   question: string
   answer: string
-  icon: any
+  icon: object
   color: string
 }
 

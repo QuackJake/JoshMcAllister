@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import svgs from "@/assets/svgs/svgs.ts";
-// import pngs from "@/assets/pngs/pngs.ts";
+import svgs from "@/assets/svgs/svgs";
+// import pngs from "@/assets/pngs/pngs";
 import { RouterLink } from "vue-router";
 
 defineProps<{
     text: string,
-    to: { name: string },
+    to: string,
 }>();
 </script>
 

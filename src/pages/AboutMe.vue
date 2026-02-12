@@ -1,14 +1,14 @@
 <script setup lang="ts">
 // import assets from '@/assets/assets';
-import Bio from '@/components/specific/Bio.vue';
-// import Testimonials from '@/components/specific/Testimonials.vue';
+import BioSection from '@/components/specific/BioSection.vue';
+// import TestimonialsSection from '@/components/specific/TestimonialsSection.vue';
 // import AwardsAndCertifications from '@/components/specific/AwardsAndCertifications.vue';
 // import ImageGallery from '@/components/imageGallery/imageGallery.vue';
 import ContactMeCTA from '@/components/common/ContactMeCTA.vue'
 </script>
 
 <template>
-  <Bio />
+  <BioSection />
 
   <!-- <hr class="hr-line" /> -->
   <!-- Removing for now, awaiting comments from Josh -->
@@ -16,7 +16,7 @@ import ContactMeCTA from '@/components/common/ContactMeCTA.vue'
 
   <hr class="hr-line">
 
-  <!-- <Testimonials />
+  <!-- <TestimonialsSection />
 
   <hr class="hr-line" />
 
