@@ -1,0 +1,6 @@
+updates needed:
+- fix text weapping and placememt for mobile
+- update images for gallery
+- fix graph image and code for aharing 
+- create workers for auto deployment
+     - start a prod and dev branch
