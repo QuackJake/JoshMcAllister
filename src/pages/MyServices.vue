@@ -1,6 +1,7 @@
 <script setup>
 import ServiceCard from '@/components/cards/ServiceCard.vue';
-import assets from '@/assets/assets';
+import pngs from '@/assets/pngs/pngs'
+import svgs from '@/assets/svgs/svgs'
 import ContactMeCTA from '@/components/common/ContactMeCTA.vue';
 import ButtonWithArrow from "@/components/common/ButtonWithArrow.vue";
 
@@ -31,16 +32,19 @@ const enterpriseServiceFeatures = [
 
 const features = [
   {
+    image: svgs.search,
     title: "Goal Clarity",
     description:
       "Identify your priorities and create a roadmap to meet them effectively.",
   },
   {
+    image: svgs.groups,
     title: "Strategic Planning",
     description:
       "Get expert advice on application strategy, essay guidance, and decision-making.",
   },
   {
+    image: pngs.graduationCap,
     title: "Comprehensive Success",
     description:
       "Combine multiple sessions and services to cover every aspect of the process.",
@@ -125,7 +129,7 @@ const features = [
               class="rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4"
             >
               <img
-                :src="assets.test_logo"
+                :src="feature.image"
                 alt=""
                 class="w-16 h-16"
               >
