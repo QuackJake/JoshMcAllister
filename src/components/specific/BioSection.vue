@@ -12,7 +12,7 @@ import assets from "@/assets/assets";
         <img
           :src="assets.selfie"
           alt="Joshua McAlister"
-          class="float-left h-auto max-w-[45vh] mr-12 my-4 rounded-xl object-cover"
+          class="float-left aspect-[3/4] w-full sm:w-[45%] md:w-[40%] h-auto mr-0 sm:mr-6 mb-4 rounded-xl object-cover"
         >
         <p>
           Josh was born in Utah and raised in Wyoming. Having grown up in Wyoming and
