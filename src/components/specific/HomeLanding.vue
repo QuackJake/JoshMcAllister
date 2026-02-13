@@ -44,6 +44,6 @@ import assets from '@/assets/assets';
 }
 
 .subtitle {
-  color: var(--color-white) /* #fff = #ffffff */;
+  color: var(--color-gray-200) /* #fff = #ffffff */;
 }
 </style>
