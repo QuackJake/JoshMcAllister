@@ -7,7 +7,7 @@ import assets from '@/assets/assets';
     <div class="relative w-full min-h-[85vh] text-center">
       <!-- Background image -->
       <img
-        :src="assets.landing_page"
+        :src="assets.UofU"
         alt="A black-and-white birdseye view of the University of Utah"
         class="absolute inset-0 w-full h-full object-cover"
       />

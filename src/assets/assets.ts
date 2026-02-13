@@ -1,7 +1,7 @@
 // src/assets/assets.ts
 
 export default {
-  landing_page: new URL('./UofU_bw.png', import.meta.url).href,
+  UofU: new URL('./UofU.webp', import.meta.url).href,
   profile: new URL('./stock_profile.png', import.meta.url).href,
   vue_svg: new URL('./vue.svg', import.meta.url).href,
   stock_mountains: new URL('./mountains.png', import.meta.url).href,
