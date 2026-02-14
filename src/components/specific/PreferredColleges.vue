@@ -55,7 +55,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <section class="flex flex-col md:flex-row items-center justify-center gap-12 w-full max-w-6xl mx-auto px-4 py-12">
+  <section class="flex flex-col md:flex-row items-center justify-center gap-12 w-full max-w-6xl mx-auto px-12 py-12">
     <!-- Left Side Paragraph -->
     <div class="md:w-1/2 text-center md:text-left space-y-4">
       <h2 class="text-2xl font-semibold text-gray-800">

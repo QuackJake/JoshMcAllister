@@ -3,7 +3,7 @@ import assets from "@/assets/assets";
 </script>
 
 <template>
-  <section class="h-[100vh]">
+  <section class="flex flex-col md:flex-row items-center justify-center gap-12 w-full max-w-6xl mx-auto px-4 py-12">
     <div class="max-w-6xl mx-auto px-6">
       <h1 class="mb-8">
         My Story, Your Future

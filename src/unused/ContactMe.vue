@@ -1,5 +1,5 @@
 <!-- Form.vue -->
-<script setup>
+<script setup lang="ts">
   // import { ref } from 'vue'
   import FormComponent from '../components/cards/ContactMeTile.vue'
 </script>

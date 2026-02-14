@@ -3,9 +3,6 @@ import { RouterLink, useRouter } from "vue-router";
 
 const router = useRouter();
 
-// const baseMenuItemClasses =
-//   "menu-item transition-colors duration-150 ease-in-out";
-
 const mainRoutes = router
   .getRoutes()
   .filter((r) => r.meta.group === "main");

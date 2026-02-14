@@ -1,53 +1,43 @@
 <script setup lang="ts">
-import { CONTACT_EMAIL } from "@/config/site"
+import { CONTACT_EMAIL, SITE_NAME } from "@/config/site"
+import { RouterLink, useRouter } from "vue-router";
 
-// const baseMenuItemClasses = "menu-item transition-colors duration-150 ease-in-out";
+const router = useRouter();
+
+const complianceRoutes = router
+  .getRoutes()
+  .filter((r) => r.meta.group === "compliance");
 </script>
 
 <template>
-  <footer class="bg-[#352f2f] py-6 text-sm">
-    <div class="flex flex-col md:flex-row md:justify-between px-6 py-4">
-      <!-- Right Side -->
-      <div class="flex-1 flex flex-col md:items-end mb-6 md:mb-0">
-        <!-- <nav class="flex flex-wrap justify-start md:justify-end gap-4 mb-4">
-          <a
-            v-for="item in mainRoutes"
-            :key="item.path"
-            :href="item.path"
-            :class="baseMenuItemClasses"
-          >
-            {{ item.name }}
-          </a>
-        </nav> -->
-
-        <div class="text-gray-500 text-sm">
-          © {{ new Date().getFullYear() }} CollEdge Counseling. All rights reserved.
-        </div>
-      </div>
-
-      <!-- Divider (hidden on mobile) -->
-      <div class="hidden md:block border-l border-gray-600 mx-6" />
-
+  <footer class="bg-[#352f2f] py-6 text-sm mt-8">
+    <div class="">
       <!-- Left Side -->
-      <div class="flex-1 flex flex-col md:items-start">
-        <!-- <nav class="flex flex-wrap justify-start gap-4 mb-4">
-          <a
+      <div class="mx-auto flex justify-center items-center">
+        <nav class="flex flex-wrap justify-center gap-12">
+          <RouterLink
             v-for="item in complianceRoutes"
             :key="item.path"
-            :href="item.path"
-            :class="baseMenuItemClasses"
+            :to="item.path"
+            class="menu-item transition-colors duration-150 ease-in-out hover:text-[#c6bdbd]"
           >
             {{ item.name }}
-          </a>
-        </nav> -->
+          </RouterLink>
 
-        <a
-          href="mailto:josuamcalister@colledgeacounseling.com"
-          class="text-gray-500 hover:text-gray-300"
-        >
-          {{ CONTACT_EMAIL }}
-        </a>
+          <div class="flex-1 flex flex-col md:items-start">
+          <a
+            href="mailto:josuamcalister@colledgeacounseling.com"
+            class="text-gray-500 hover:text-gray-300"
+          >
+            {{ CONTACT_EMAIL }}
+          </a>
+        </div>
+        </nav>
       </div>
+    </div>
+
+    <div class="text-gray-500 text-sm mt-4">
+      © {{ new Date().getFullYear() }} {{SITE_NAME}}. All rights reserved.
     </div>
   </footer>
 </template>

@@ -1,9 +1,12 @@
 <script setup lang="ts">
-// import ButtonWithArrow from "../common/ButtonWithArrow.vue";
 defineProps<{
   title: string;
-  price: string;
-  period: string;
+  price1: string;
+  price2: string;
+  price3: string;
+  period1: string;
+  period2: string;
+  period3: string;
   showPrice: boolean;
   description: string;
   features: string[];
@@ -24,7 +27,7 @@ defineProps<{
   >
     <div
       v-if="featured"
-      class="absolute align-left -top-3 bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow"
+      class="absolute align-left -top-4 bg-blue-500 text-white text-sm font-semibold px-3 py-1 rounded-full shadow"
     >
       Best Value
     </div>
@@ -34,12 +37,18 @@ defineProps<{
 
     <div
       v-if="showPrice"
-      class="flex items-baseline gap-2 mb-4"
+      class="flex items-center gap-8 mb-4"
     >
-      <span class="text-4xl font-bold text-foreground">${{ price }}</span>
-      <span class="text-muted-foreground text-lg">/ {{ period }}</span>
-    </div>
+      <div class="flex items-baseline gap-2">
+        <span class="text-4xl font-bold text-foreground"> ${{ price1 }} </span>
+        <span class="text-muted-foreground text-lg"> / {{ period1 }} </span>
+      </div>
 
+      <div class="flex items-baseline gap-2">
+        <span class="text-4xl font-bold text-foreground"> ${{ price2 }} </span>
+        <span class="text-muted-foreground text-lg"> / {{ period2 }} </span>
+      </div>
+    </div>
     <p
       v-if="description"
       class="text-muted-foreground mb-6"

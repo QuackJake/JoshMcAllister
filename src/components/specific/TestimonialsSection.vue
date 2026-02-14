@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import TestimonialTile from "../cards/TestimonialTile.vue"
 import assets from "@/assets/assets";
 </script>

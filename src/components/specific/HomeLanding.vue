@@ -10,7 +10,7 @@ import assets from '@/assets/assets';
         :src="assets.UofU"
         alt="A black-and-white birdseye view of the University of Utah"
         class="absolute inset-0 w-full h-full object-cover"
-      />
+      >
 
       <!-- Overlay -->
       <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
