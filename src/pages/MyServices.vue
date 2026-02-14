@@ -88,7 +88,6 @@ const features = [
             description="Junior-Year Services focus on exploration, planning academics/extracurriculars, and creating a personalized college roadmap."
             :features="juniorYearFeatures"
             button-text="Choose Plan"
-            to="/junior"
           />
           <ServiceCard
             title="Senior-Year"
@@ -98,7 +97,6 @@ const features = [
             description="Senior-Year services focus on finalizing applications, essays, and college choices with personalized guidance and support."
             :features="seniorYearFeatures"
             button-text="Get Started"
-            to="/senior"
           />
         </div>
         <div class="max-w-4xl mx-auto text-center mt-8">

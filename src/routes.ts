@@ -4,14 +4,12 @@ import Home from './pages/HomePage.vue'
 import AboutMe from './pages/AboutMe.vue'
 import MyServices from './pages/MyServices.vue'
 // import FAQ from './pages/FAQ.vue'
-// import ContactMe from './pages/ContactMe.vue'
 
 import DisclaimerPage from './pages/compliance/DisclaimerPage.vue'
 import PrivacyPage from './pages/compliance/PrivacyPage.vue'
 import ServicesAgreement from './pages/compliance/ServicesAgreement.vue'
 
 import CalendarPage from './pages/services/CalendarPage.vue'
-import PurchasePage from './pages/services/PurchasePage.vue'
 
 // import NotFound from './pages/NotFound.vue'
 
@@ -30,7 +28,6 @@ const routes = [
 
   // 'service' = Dynamic routes for the services and Acuity pages
   { path: '/calendar', name: 'Calendar', component: CalendarPage, meta: { group: 'service' } },
-  { path: '/purchase', name: 'Purchase', component: PurchasePage, meta: { group: 'service' } },
 
   { path: '/:pathMatch(.*)*', redirect: '/notfound' }
 

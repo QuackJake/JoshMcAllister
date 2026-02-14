@@ -25,19 +25,19 @@ const complianceRoutes = router
           </RouterLink>
 
           <div class="flex-1 flex flex-col md:items-start">
-          <a
-            href="mailto:josuamcalister@colledgeacounseling.com"
-            class="text-gray-500 hover:text-gray-300"
-          >
-            {{ CONTACT_EMAIL }}
-          </a>
-        </div>
+            <a
+              href="mailto:josuamcalister@colledgeacounseling.com"
+              class="text-gray-500 hover:text-gray-300"
+            >
+              {{ CONTACT_EMAIL }}
+            </a>
+          </div>
         </nav>
       </div>
     </div>
 
     <div class="text-gray-500 text-sm mt-4">
-      © {{ new Date().getFullYear() }} {{SITE_NAME}}. All rights reserved.
+      © {{ new Date().getFullYear() }} {{ SITE_NAME }}. All rights reserved.
     </div>
   </footer>
 </template>

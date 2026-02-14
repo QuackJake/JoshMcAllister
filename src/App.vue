@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import assets from "@/assets/assets";
+// import assets from "@/assets/assets";
 import NavigationBar from "./components/layouts/NavigationBar.vue";
 import PageFooter from "./components/layouts/PageFooter.vue";
 // import Header from './components/components/Header.vue'

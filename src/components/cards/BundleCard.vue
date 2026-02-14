@@ -3,15 +3,11 @@ defineProps<{
   title: string;
   price1: string;
   price2: string;
-  price3: string;
   period1: string;
   period2: string;
-  period3: string;
   showPrice: boolean;
   description: string;
   features: string[];
-  buttonText: string;
-  to: { name: string };
   featured?: boolean;
 }>();
 </script>

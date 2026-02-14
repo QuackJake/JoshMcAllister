@@ -8,7 +8,6 @@ defineProps<{
   description: string;
   features: string[];
   buttonText: string;
-  to: { name: string };
   featured?: boolean;
 }>();
 </script>
@@ -32,18 +31,12 @@ defineProps<{
       {{ title }}
     </h3>
 
-    <div
-      v-if="showPrice"
-      class="flex items-baseline gap-2 mb-4"
-    >
+    <div v-if="showPrice" class="flex items-baseline gap-2 mb-4">
       <span class="text-4xl font-bold text-foreground">${{ price }}</span>
       <span class="text-muted-foreground text-lg">/ {{ period }}</span>
     </div>
 
-    <p
-      v-if="description"
-      class="text-muted-foreground mb-6"
-    >
+    <p v-if="description" class="text-muted-foreground mb-6">
       {{ description }}
     </p>
 
@@ -51,10 +44,7 @@ defineProps<{
       v-if="features.length"
       class="list-disc list-inside space-y-2 mb-6 text-foreground"
     >
-      <li
-        v-for="feature in features"
-        :key="feature"
-      >
+      <li v-for="feature in features" :key="feature">
         {{ feature }}
       </li>
     </ul>
