@@ -62,12 +62,16 @@ p {
 }
 
 section {
-  min-height: 75vh;
   height: auto;
   width: 100%;
-  /* border: 10px solid #213547; */
   display: flex;
-  border-radius: 1.5rem;
+
+  /* Alternate Color Scheme */
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 button {
@@ -120,6 +124,11 @@ img {
   width: 75%;
   margin: 4rem auto;
   border: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
 }
 
 #app {
