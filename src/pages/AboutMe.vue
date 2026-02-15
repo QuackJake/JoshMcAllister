@@ -1,10 +1,10 @@
 <script setup lang="ts">
 // import assets from '@/assets/assets';
-import BioSection from '@/components/specific/BioSection.vue';
-// import TestimonialsSection from '@/components/specific/TestimonialsSection.vue';
-// import AwardsAndCertifications from '@/components/specific/AwardsAndCertifications.vue';
+import BioSection from '@/components/sections/BioSection.vue';
+// import TestimonialsSection from '@/components/sections/TestimonialsSection.vue';
+// import AwardsAndCertifications from '@/components/sections/AwardsAndCertifications.vue';
 // import ImageGallery from '@/components/imageGallery/imageGallery.vue';
-import ContactMeCTA from '@/components/common/ContactMeCTA.vue'
+import ContactMeCTA from '@/components/links/ContactMeCTA.vue'
 </script>
 
 <template>

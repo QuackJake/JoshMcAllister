@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import TileWithHeader from "../common/TileWithHeader.vue";
-import ButtonWithArrow from "../common/ButtonWithArrow.vue";
+import CardWithHeader from "@/components/cards/CardWithHeader.vue";
+import ButtonWithArrow from "@/components/links/ButtonWithArrow.vue";
 </script>
 
 <template>
@@ -21,12 +21,12 @@ import ButtonWithArrow from "../common/ButtonWithArrow.vue";
       <!-- Main -->
       <main class="max-w-6xl mx-auto px-4 pb-20">
         <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-16">
-          <TileWithHeader
+          <CardWithHeader
             title="Year-to-Year Services"
             body="Josh works with students every step of the way—from exploring colleges and planning academics to refining essays and managing deadlines.
             With one-on-one guidance, students build a strong foundation, develop a clear plan, and feel confident taking action in their senior year."
           />
-          <TileWithHeader
+          <CardWithHeader
             title="Advising Bundles"
             body="Our counseling bundles provide a series of services and meetings throughout the year, ensuring students make the right decisions at each stage.
             This structured approach keeps families organized, informed, and confident in their college journey."

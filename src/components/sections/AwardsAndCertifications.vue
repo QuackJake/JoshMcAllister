@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AwardCard from "../cards/AwardTile.vue";
+import AwardCard from "@/components/cards/AwardCard.vue";
 import assets from "@/assets/assets.ts";
 </script>
 

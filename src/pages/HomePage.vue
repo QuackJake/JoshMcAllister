@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import HomeLanding from '@/components/specific/HomeLanding.vue'
-import PreferredColleges from '@/components/specific/PreferredColleges.vue'
-import ContactMeCTA from '@/components/common/ContactMeCTA.vue'
-import ServicesIntroduction from '@/components/specific/ServicesIntroduction.vue'
+import HomeLanding from '@/components/sections/HomeLanding.vue'
+import PreferredColleges from '@/components/sections/PreferredColleges.vue'
+import ContactMeCTA from '@/components/links/ContactMeCTA.vue'
+import ServicesIntroduction from '@/components/sections/ServicesIntroduction.vue'
 </script>
 
 <template>

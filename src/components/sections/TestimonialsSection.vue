@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TestimonialTile from "../cards/TestimonialTile.vue"
+import TestimonialCard from "@/components/cards/TestimonialCard.vue"
 import assets from "@/assets/assets";
 </script>
 
@@ -16,7 +16,7 @@ import assets from "@/assets/assets";
       </header>
 
       <div class="grid gap-8 md:grid-cols-3 lg:grid-cols-2">
-        <TestimonialTile
+        <TestimonialCard
           :image="assets.selfie"
           name="Josh McAlister"
           subtitle="Class of 2025"
@@ -29,9 +29,9 @@ import assets from "@/assets/assets";
               class="float-left h-8 w-8 rounded-xl object-cover"
             >
           </template>
-        </TestimonialTile>
+        </TestimonialCard>
 
-        <TestimonialTile
+        <TestimonialCard
           :image="assets.selfie"
           name="Josh McAlister"
           subtitle="Class of 2025"
@@ -44,9 +44,9 @@ import assets from "@/assets/assets";
               class="float-left h-8 w-8 rounded-xl object-cover"
             >
           </template>
-        </TestimonialTile>
+        </TestimonialCard>
 
-        <TestimonialTile
+        <TestimonialCard
           :image="assets.selfie"
           name="Josh McAlister"
           subtitle="Class of 2025"
@@ -59,9 +59,9 @@ import assets from "@/assets/assets";
               class="float-left h-8 w-8 rounded-xl object-cover"
             >
           </template>
-        </TestimonialTile>
+        </TestimonialCard>
 
-        <TestimonialTile
+        <TestimonialCard
           :image="assets.selfie"
           name="Josh McAlister"
           subtitle="Class of 2025"
@@ -74,9 +74,9 @@ import assets from "@/assets/assets";
               class="float-left h-8 w-8 rounded-xl object-cover"
             >
           </template>
-        </TestimonialTile>
+        </TestimonialCard>
 
-        <TestimonialTile
+        <TestimonialCard
           :image="assets.selfie"
           name="Josh McAlister"
           subtitle="Class of 2025"
@@ -89,9 +89,9 @@ import assets from "@/assets/assets";
               class="float-left h-8 w-8 rounded-xl object-cover"
             >
           </template>
-        </TestimonialTile>
+        </TestimonialCard>
 
-        <TestimonialTile
+        <TestimonialCard
           :image="assets.selfie"
           name="Josh McAlister"
           subtitle="Class of 2025"
@@ -104,7 +104,7 @@ import assets from "@/assets/assets";
               class="float-left h-8 w-8 rounded-xl object-cover"
             >
           </template>
-        </TestimonialTile>
+        </TestimonialCard>
       </div>
     </div>
   </main>

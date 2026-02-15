@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onBeforeUnmount, nextTick } from 'vue'
 import collegeLogos from '@/assets/collegeLogos/collegeLogos.ts'
-import ButtonWithArrow from '../common/ButtonWithArrow.vue'
+import ButtonWithArrow from '@/components/links/ButtonWithArrow.vue'
 
 const rows = 8
 const cols = 2

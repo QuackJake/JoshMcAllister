@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import galleryImages from "@/assets/galleryImages/galleryImages";
-import GalleryRow from "./galleryRow.vue";
+import GalleryRow from "@/imageGallery/galleryRow.vue";
 </script>
 
 <template>

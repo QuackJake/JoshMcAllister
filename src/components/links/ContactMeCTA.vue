@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import MailToButton from '../common/MailToButton.vue'
+import MailToButton from '@/components/links/MailToButton.vue'
 </script>
 
 <template>

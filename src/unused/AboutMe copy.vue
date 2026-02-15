@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import TileWithHeader from '../components/cards/TileWithHeader.vue';
+  import CardWithHeader from '@/components/cards/CardWithHeader.vue';
 </script>
 
 <template>
@@ -21,7 +21,7 @@
     <!-- Tile Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- About Tile -->
-      <TileWithHeader 
+      <CardWithHeader 
         title="About Me"
         custom-class="md:col-span-2"
       >
@@ -32,10 +32,10 @@
             you'll find me exploring new technologies, contributing to open source, or enjoying the outdoors.
           </p>
         </template>
-      </TileWithHeader>
+      </CardWithHeader>
 
       <!-- Skills Tile -->
-      <TileWithHeader
+      <CardWithHeader
         title="My Skills"
       > 
         <template #body>
@@ -50,10 +50,10 @@
             <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">SQL</span>
           </div>
         </template>
-      </TileWithHeader>
+      </CardWithHeader>
 
       <!-- Experience Tile -->
-      <TileWithHeader
+      <CardWithHeader
         title="Experience"
       >
         <template #body>
@@ -74,9 +74,9 @@
             </p>
           </div>
         </template>
-      </TileWithHeader>
+      </CardWithHeader>
 
-      <!-- <TileWithHeader>
+      <!-- <CardWithHeader>
           <template #header>
 
           </template>
@@ -84,11 +84,11 @@
           <template #body>
 
           </template>
-      </TileWithHeader> -->
+      </CardWithHeader> -->
 
 
       <!-- Education Tile -->
-      <TileWithHeader
+      <CardWithHeader
         title="Education"
       >
         <template #body>
@@ -104,11 +104,11 @@
             </p>
           </div>
         </template>
-      </TileWithHeader>
+      </CardWithHeader>
 
       
       <!-- Contact Tile -->
-      <TileWithHeader 
+      <CardWithHeader 
         title="Contact Me"
       >
         <template #body>
@@ -134,10 +134,10 @@
             GitHub
           </a>
         </template>
-      </TileWithHeader>
+      </CardWithHeader>
 
       <!-- Projects Tile -->
-      <TileWithHeader 
+      <CardWithHeader 
         title="My Projects"
         custom-class="md:col-span-2"
         body-spacing="grid grid-cols-1 md:grid-cols-2 gap-4"
@@ -168,10 +168,10 @@
             </div>
           </div>
         </template>
-      </TileWithHeader>
+      </CardWithHeader>
 
       <!-- Interests Tile -->
-      <TileWithHeader
+      <CardWithHeader
         title="Interests"
       >
         <template #body>
@@ -192,7 +192,7 @@
             <span class="text-gray-700">Reading</span>
           </div>
         </template>
-      </TileWithHeader>
+      </CardWithHeader>
     </div>
   </div>
 </template>

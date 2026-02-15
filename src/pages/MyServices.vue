@@ -3,8 +3,8 @@ import ServiceCard from "@/components/cards/ServiceCard.vue";
 import BundleCard from "@/components/cards/BundleCard.vue";
 import pngs from "@/assets/pngs/pngs";
 import svgs from "@/assets/svgs/svgs";
-import ContactMeCTA from "@/components/common/ContactMeCTA.vue";
-import ButtonWithArrow from "@/components/common/ButtonWithArrow.vue";
+import ContactMeCTA from "@/components/links/ContactMeCTA.vue";
+import ButtonWithArrow from "@/components/links/ButtonWithArrow.vue";
 
 const juniorYearFeatures = [
   "College and Interest discovery",
